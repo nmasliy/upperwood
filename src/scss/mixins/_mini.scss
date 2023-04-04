@@ -1,0 +1,139 @@
+/* stylelint-disable */
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mr($value) {
+  &:not(:last-child) {
+    margin-right: $value;
+  }
+}
+
+@mixin ml($value) {
+  &:not(:last-child) {
+    margin-left: $value;
+  }
+}
+
+@mixin mb($value) {
+  &:not(:last-child) {
+    margin-bottom: $value;
+  }
+}
+
+@mixin mt($value) {
+  &:not(:last-child) {
+    margin-top: $value;
+  }
+}
+
+@mixin circle($size: 22px, $color: $accent-color) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $color;
+}
+
+@mixin footerToBottom {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+@mixin icon($size: 40px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $size;
+  height: $size;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #a7c5df;
+
+  picture,
+  img {
+    display: flex;
+  }
+}
+
+@mixin bg-circle($size: 324px) {
+  position: absolute;
+  content: '';
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: #f4f8fc;
+  filter: blur(50px);
+  will-change: filter;
+}
+
+@mixin triangle($size: 26px, $color: #fff) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 $size $size 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: none;
+  width: max-content;
+  min-width: 100px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 5;
+}
+
+@mixin submenu-right {
+  position: absolute;
+  left: 100%;
+  top: 1px;
+  display: none;
+  width: max-content;
+  min-width: 192px;
+  max-width: 500px;
+  background-color: #fff;
+  z-index: 4;
+}
+
+@mixin reset-search-input {
+  ::-webkit-search-decoration,
+  ::-webkit-search-cancel-button,
+  ::-webkit-search-results-button,
+  ::-webkit-outer-spin-button,
+  ::-webkit-inner-spin-button,
+  ::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+@mixin text-shadow-hover {
+  text-shadow: 0 4px 16px transparent;
+  transition: text-shadow $transition;
+
+  @include hover {
+    text-shadow: 0 4px 16px rgba(55, 87, 214, 60%);
+  }
+}

@@ -1,0 +1,45 @@
+.how {
+  &__inner {
+  }
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    counter-reset: how-list;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 95px 130px;
+  }
+
+  &__item {
+    counter-increment: how-list;
+    text-align: center;
+
+    picture {
+      display: flex;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 24px;
+
+    &::before {
+      content: counter(how-list);
+      position: absolute;
+      right: -2px;
+      top: -2px;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 1;
+      color: #fff;
+      background: #307aff;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  // outline-color: $accent-color;
+  outline: transparent;
+  box-sizing: inherit;
+
+  &:focus {
+    outline: 1px solid $accent-color;
+  }
+
+  &:active,
+  &.is-mouse-focused:focus {
+    outline: none;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-family: $font-family;
+  font-size: 18px;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: #fff;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 13px;
+  }
+}

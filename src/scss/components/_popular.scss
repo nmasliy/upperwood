@@ -1,0 +1,31 @@
+.popular {
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__head {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: auto;
+    }
+
+    a {
+      display: block;
+      padding: 9px 16px;
+      font-weight: 600;
+    }
+
+    li {
+      flex-shrink: 0;
+    }
+  }
+
+  &__slider {
+    .swiper-slide {
+      width: 210px;
+      box-sizing: border-box;
+    }
+  }
+}

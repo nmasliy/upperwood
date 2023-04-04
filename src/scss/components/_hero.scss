@@ -1,0 +1,95 @@
+.hero {
+  &__inner {
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    min-height: 595px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $primary-color;
+  }
+
+  &__item {
+    margin: 0 auto;
+    max-width: 918px;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.4;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__btn {
+  }
+
+  &__slider-prev {
+    left: 160px;
+    transform: translateY(-50%);
+  }
+
+  &__slider-next {
+    right: 160px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .swiper-pagination {
+    position: static;
+    margin-top: 32px;
+
+    .swiper-pagination-bullet {
+      margin: 0 16px;
+      border-radius: 0;
+      width: 48px;
+      height: 4px;
+      background: rgba($text-color, 0.6);
+      opacity: 1;
+      transition: background-color $transition;
+      cursor: pointer;
+
+      &.swiper-pagination-bullet-active {
+        background: $primary-color;
+      }
+    }
+  }
+
+  &__slider-prev,
+  &__slider-next {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    background: url("../img/chevron-left-white-icon.svg") center no-repeat;
+    background-color: #5a60ab;
+    transition: background-color $transition;
+    cursor: pointer;
+
+    @include hover {
+      background-color: rgb(108, 115, 202);
+    }
+  }
+}

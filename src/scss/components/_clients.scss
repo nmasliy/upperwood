@@ -1,0 +1,23 @@
+.clients {
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+  }
+
+  &__item {
+    picture {
+      display: inline-flex;
+    }
+
+    img {
+      max-height: 100px;
+    }
+  }
+}

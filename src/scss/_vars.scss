@@ -1,0 +1,21 @@
+// base
+:root {
+  --content-width: 1580px;
+  --container-offset: 11px;
+  --container-width: calc(var(--content-width) + var(--container-offset) * 2);
+}
+
+$font-family: "Manrope", sans-serif;
+$transition: 0.225s ease-in-out;
+$menu-transition: 0.3s ease-in-out;
+
+// colors
+$bg-color: #000;
+$white-color: #fff;
+$black-color: #13121e;
+$text-color: #373737;
+$secondary-color: rgba(33, 33, 33, 50%);
+$accent-color: #fce300;
+$orange-color: #fb8202;
+$primary-color: #313896;
+$primary-gradient: radial-gradient(152.49% 100% at 50% 100%, #313896 0%, #4042e2 57.19%, #4f52ff 100%);

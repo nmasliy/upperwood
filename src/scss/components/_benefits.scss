@@ -1,0 +1,32 @@
+.benefits {
+  &__content {
+    display: flex;
+    padding-left: max(15px, calc((100% - var(--container-width)) / 2));
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__info {
+    position: relative;
+    z-index: 3;
+    flex-shrink: 0;
+    margin-right: 30px;
+    padding-top: 64px;
+    width: 630px;
+    background-color: #fff;
+  }
+
+  &__slider {
+    width: calc(100% - 630px - 30px);
+  }
+
+  &__item {
+    width: 580px;
+
+    img {
+      height: 408px;
+    }
+  }
+}

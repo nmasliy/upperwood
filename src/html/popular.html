@@ -1,0 +1,27 @@
+<section class="popular section-offset">
+	<div class="container">
+		<div class="popular__inner">
+			<h2 class="popular__title title">Популярные товары</h2>
+			<div class="popular__head">
+				<ul>
+					<li><a href="#">Мебель в ванную</a></li>
+					<li><a href="#">Зеркала</a></li>
+					<li><a href="#">Раковины</a></li>
+					<li><a href="#">Кухонные мойки</a></li>
+					<li><a href="#">Смесители</a></li>
+					<li><a href="#">Унитазы</a></li>
+					<li><a href="#">Инсталляции</a></li>
+				</ul>
+			</div>
+			<div class="popular__slider swiper">
+				<div class="popular__nav slider-nav">
+					<button class="slider-nav__prev"><img src="img/arrow-right-icon.svg"
+							alt="кнопка навигации слайдера назад"></button>
+					<button class="slider-nav__next"><img src="img/arrow-right-icon.svg"
+							alt="кнопка навигации слайдера впёред"></button>
+				</div>
+				@include('products/popular-products.html')
+			</div>
+		</div>
+	</div>
+</section>

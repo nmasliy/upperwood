@@ -1,0 +1,90 @@
+/* stylelint-disable declaration-no-important */
+.perfect-scrollbar {
+  .ps__rail-y {
+    border-radius: 10px !important;
+    width: 48px !important;
+    background: transparent !important;
+    opacity: 1 !important;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 23px;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: rgba($primary-color, 10%);
+    }
+  }
+
+  .ps__thumb-y {
+    right: 0 !important;
+    width: 48px !important;
+    background: transparent !important;
+    cursor: grab;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 23px;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: $primary-color;
+    }
+  }
+}
+
+.choices {
+  &::before {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background: url("../img/chevron-down-icon.svg") center no-repeat;
+    transform: translateY(-50%);
+    transition: transform $transition;
+  }
+
+  &::after {
+    display: none !important;
+  }
+
+  * {
+    border: none !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    color: $text-color !important;
+  }
+
+  &__inner {
+    border: none;
+    border-radius: 0 !important;
+    padding: 11px 16px 11px 24px !important;
+    background-color: #fff !important;
+  }
+
+  &__item.choices__placeholder.choices__item--selectable {
+    color: $secondary-color !important;
+    opacity: 1 !important;
+  }
+
+  &__list {
+    border-radius: 0 !important;
+  }
+
+  &__item.choices__item--choice {
+    @include text-shadow-hover;
+
+    padding: 11px 16px !important;
+    background-color: #fff !important;
+  }
+
+  &.is-open {
+    &::before {
+      transform: rotate(180deg) translateY(calc(-50% + 10px));
+    }
+  }
+}

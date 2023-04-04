@@ -1,0 +1,309 @@
+.header {
+  &__top {
+    border-bottom: 2px solid rgba($primary-color, 10%);
+    padding: 15px 0;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &__top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    margin-right: 24px;
+
+    img {
+      width: 197px;
+    }
+  }
+
+  &__caption {
+    max-width: 163px;
+  }
+
+  &__info {
+    ul {
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+      @include mr(64px);
+
+      max-width: 213px;
+    }
+  }
+
+  &__main {
+    padding: 24px 0;
+  }
+
+  &__main-inner {
+    display: flex;
+  }
+
+  &__catalog {
+    position: relative;
+    z-index: 4;
+    margin-right: 9px;
+
+    a {
+      display: block;
+      font-weight: 600;
+    }
+
+    a:not(.header__catalog-btn) {
+      padding: 9px 16px;
+      min-height: 48px;
+      text-shadow: 0 4px 16px transparent;
+      transition: $transition;
+
+      @include hover {
+        text-shadow: 0 4px 16px rgba(55, 87, 214, 60%);
+      }
+    }
+
+    > ul {
+      @include submenu;
+
+      position: absolute;
+      min-width: 210px;
+    }
+
+    @include hover {
+      > ul {
+        display: block;
+      }
+    }
+  }
+
+  &__catalog-submenu {
+    position: relative;
+
+    > a {
+      position: relative;
+      border-bottom: 2px solid transparent;
+      padding-right: 40px;
+      transition: border-color $transition;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        width: 12px;
+        height: 8px;
+        background: url("../img/chevron-down-icon.svg") center no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+
+    li > a {
+      padding: 11px 16px;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    > ul {
+      @include submenu-right;
+    }
+
+    @include hover {
+      > ul {
+        display: block;
+      }
+
+      > a {
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  &__search-box {
+    position: relative;
+    flex-grow: 1;
+    margin-right: 9px;
+
+    input {
+      @include reset-search-input;
+
+      -webkit-appearance: none;
+      appearance: none;
+      display: block;
+      outline: none;
+      border: 2px solid rgba($primary-color, 10%);
+      border-radius: 0;
+      padding: 11px 20px 11px 48px;
+      width: 100%;
+      font-size: 14px;
+      color: $text-color;
+      background: url("../img/search-icon.svg") center left 13px no-repeat;
+      background-color: #fff;
+      transition: border-color $transition;
+
+      &::placeholder {
+        color: $secondary-color;
+      }
+
+      @include hover {
+        border-color: rgba(0, 0, 0, 30%);
+
+        &:invalid {
+          border-color: #fd2020;
+        }
+
+        &:focus,
+        &:active {
+          border-color: $accent-color;
+        }
+      }
+
+      /* stylelint-disable-next-line order/order */
+      &:invalid {
+        border-color: #fd2020;
+      }
+
+      &:focus,
+      &:active {
+        border-color: $accent-color;
+      }
+    }
+
+    &.is-active {
+      .header__search-hints {
+        display: block;
+      }
+    }
+  }
+
+  &__hints-container {
+    padding: 12px 0;
+    background-color: #fff;
+  }
+
+  &__hints-inner {
+    position: relative;
+    padding-right: 48px;
+    max-width: 446px;
+    max-height: 196px;
+
+    ul {
+      margin: -12px 0;
+    }
+  }
+
+  &__search-hints {
+    @include submenu;
+
+    left: 40px;
+    z-index: 3;
+    width: auto;
+    font-size: 16px;
+    filter: drop-shadow(2px 0 4px rgba(55, 87, 214, 24%)) drop-shadow(0 4px 8px rgba(55, 87, 214, 16%));
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: -14px;
+      z-index: -1;
+      border-style: solid;
+      border-width: 0 13px 22.5px;
+      border-color: transparent transparent #fff;
+      width: 0;
+      height: 0;
+      filter: drop-shadow(2px 0 4px rgba(55, 87, 214, 24%)) drop-shadow(0 4px 8px rgba(55, 87, 214, 16%));
+    }
+
+    ul {
+      position: relative;
+      padding-top: 3px;
+      background-color: #fff;
+    }
+
+    a {
+      @include text-shadow-hover;
+
+      display: flex;
+      align-items: center;
+      padding: 3px 9px;
+      min-height: 48px;
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      font-weight: 600;
+    }
+
+    a {
+      @include text-shadow-hover;
+
+      display: block;
+      border-bottom: 2px solid transparent;
+      padding: 9px 16px;
+      transition: border-color $transition;
+
+      &:focus,
+      &:active {
+        border-color: $primary-color;
+      }
+    }
+
+    > ul {
+      > li {
+        @include mr(9px);
+      }
+    }
+  }
+
+  &__nav-submenu {
+    position: relative;
+
+    > ul {
+      @include submenu;
+    }
+
+    > a {
+      position: relative;
+      border-bottom: 2px solid transparent;
+      padding-right: 40px;
+      transition: border-color $transition;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        width: 12px;
+        height: 8px;
+        background: url("../img/chevron-down-icon.svg") center no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+
+    &.is-disabled {
+      opacity: 0.5;
+    }
+
+    @include hover {
+      > a {
+        border-color: $primary-color;
+      }
+
+      > ul {
+        display: block;
+      }
+    }
+  }
+}

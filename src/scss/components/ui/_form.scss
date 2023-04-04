@@ -1,0 +1,77 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    .form__item {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    @include mb(24px);
+
+    input,
+    textarea {
+      display: block;
+      outline: none;
+      border: 2px solid rgba(0, 0, 0, 5%);
+      border-radius: 0;
+      padding: 11px 24px;
+      width: 100%;
+      font-size: 16px;
+      color: $text-color;
+      background-color: #fff;
+      transition: border-color $transition;
+
+      &::placeholder {
+        color: $secondary-color;
+      }
+
+      @include hover {
+        border-color: rgba(0, 0, 0, 30%);
+
+        &:invalid {
+          border-color: #fd2020;
+        }
+
+        &:focus,
+        &:active {
+          border-color: $accent-color;
+        }
+      }
+
+      /* stylelint-disable-next-line order/order */
+      &:invalid {
+        border-color: #fd2020;
+      }
+
+      &:focus,
+      &:active {
+        border-color: $accent-color;
+      }
+    }
+  }
+
+  &__main {
+    margin-bottom: 24px;
+  }
+
+  &__btn {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__caption {
+    font-size: 12px;
+    text-align: center;
+  }
+}

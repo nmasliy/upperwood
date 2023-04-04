@@ -1,0 +1,91 @@
+.btn-primary,
+.btn-accent,
+.btn-accent-sm,
+.btn-outline,
+.btn-outline-sm,
+.btn-accent-lg {
+  display: inline-block;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 12px 21px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: normal;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+}
+
+.btn-primary {
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  background: $primary-color;
+  transition: background-color $transition;
+
+  @include hover {
+    background-color: #11077b;
+  }
+
+  /* stylelint-disable-next-line order/order */
+  &:focus,
+  &:active {
+    background-color: #11077b;
+  }
+}
+
+.btn-accent,
+.btn-accent-sm,
+.btn-accent-lg {
+  box-shadow: 0 12px 24px rgba(128, 66, 0, 0%);
+  font-weight: 700;
+  color: $text-color;
+  background: $accent-color;
+  transition: box-shadow $transition, background-color $transition;
+
+  @include hover {
+    box-shadow: 0 12px 24px rgba(128, 66, 0, 35%);
+  }
+
+  /* stylelint-disable-next-line order/order */
+  &:focus,
+  &:active {
+    background-color: $orange-color;
+  }
+}
+
+.btn-accent-sm,
+.btn-outline-sm {
+  padding: 7px 20px;
+  font-size: 14px;
+}
+
+.btn-outline,
+.btn-outline-sm {
+  border-color: #313896;
+  box-shadow: 2px 0 4px rgba(55, 87, 214, 0%), 0 4px 8px rgba(55, 87, 214, 0%);
+  color: $primary-color;
+  transition: background-color $transition, box-shadow $transition;
+
+  @include hover {
+    box-shadow: 2px 0 4px rgba(55, 87, 214, 24%), 0 4px 8px rgba(55, 87, 214, 16%);
+    background-color: #ebecf5;
+
+    &:focus,
+    &:active {
+      background-color: #a6abe7;
+    }
+  }
+
+  /* stylelint-disable-next-line order/order */
+  &:focus,
+  &:active {
+    background-color: #a6abe7;
+  }
+}
+
+.btn-accent-lg {
+  padding: 17px 32px;
+}

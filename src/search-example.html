@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('html/head.html')
+
+<body>
+
+  <div class="page-wrapper">
+
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="header__top-inner">
+            <div class="header__logo-wrapper">
+              <a class="header__logo" href="./">
+                <img src="img/logo.svg" width="197" height="57" alt="Логотип">
+              </a>
+              <div class="header__caption">Поставщик сантехники и мебели оптом</div>
+            </div>
+            <div class="header__info">
+              <ul>
+                <li>Нижний Новгород <br> ул. Вятская 41</li>
+                <li>Ежедневно с 8:00 до 17:00</li>
+                <li>
+                  <a href="tel:88002012437">8 800 201-24-37</a>
+                  <div>Звонок по России бесплатный</div>
+                  <a href="mailto:optmebelit@yandex.ru">optmebelit@yandex.ru</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="container">
+          <div class="header__main-inner">
+            <div class="header__catalog">
+              <a class="header__catalog-btn btn-primary" href="#">Каталог товаров</a>
+              <ul>
+                <li class="header__catalog-submenu">
+                  <a href="#">Мебель в ванную</a>
+                  <ul>
+                    <li><a href="#">Тумбы под раковину</a></li>
+                    <li><a href="#">Тумбы с раковинами</a></li>
+                    <li><a href="#">Шкафы-пеналы</a></li>
+                    <li><a href="#">Тумбы под стиральную машину</a></li>
+                    <li><a href="#">Тумбы под стиральную машину с раковинами</a></li>
+                    <li><a href="#">Комплект тумба со столешницей и раковиной</a></li>
+                    <li><a href="#">Комплект столешница с кронштейнами и раковиной</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Зеркала</a></li>
+                <li class="header__catalog-submenu">
+                  <a href="#">Раковины</a>
+                  <ul>
+                    <li><a href="#">Встраиваемые и полувстраиваемые</a></li>
+                    <li><a href="#">Накладные раковины</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Кухонные мойки</a></li>
+              </ul>
+            </div>
+
+            <!-- <div class="header__search-box is-active"> - чтобы отобразить подсказки -->
+            <div class="header__search-box is-active">
+              <form action="#">
+                <input type="search" placeholder="Введите запрос">
+              </form>
+              <div class="header__search-hints">
+                <!-- Пример с подсказками  в несколько строк и переполнением -->
+                <div class="header__hints-container">
+                  <div class="header__hints-inner perfect-scrollbar">
+                    <ul>
+                      <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                      <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                      <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                      <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                      <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                      <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                      <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Пример с подсказками  в одну строку -->
+                <!-- <ul>
+                  <li><a href="#">Мебель в ванную</a></li>
+                  <li><a href="#">Зеркала</a></li>
+                  <li><a href="#">Раковины</a></li>
+                  <li><a href="#">Кухонные мойки</a></li>
+                </ul> -->
+              </div>
+            </div>
+            <nav class="header__nav">
+              <ul>
+                <li><a href="#">Новинки</a></li>
+                <li><a href="#">Бренды</a></li>
+                <li class="header__nav-submenu">
+                  <a href="#">Условия сотрудничества</a>
+                  <ul>
+                    <li><a href="#">Оптовым клиентам</a></li>
+                    <li><a href="#">Строительным компаниям</a></li>
+                    <li><a href="#">Дизайнерам</a></li>
+                    <li><a href="#">Поставщикам</a></li>
+                  </ul>
+                </li>
+                <li class="header__nav-submenu">
+                  <a href="#">Покупателям</a>
+                  <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Доставка</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu">
+        <nav class="menu__nav">
+          <ul>
+            <li><a href="#">Новинки</a></li>
+            <li><a href="#">Бренды</a></li>
+            <li><a href="#">Условия сотрудничества</a></li>
+            <li><a href="#">Покупателям</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+    @include('html/hero.html')
+    @include('html/popular.html')
+    @include('html/benefits.html')
+    @include('html/how.html')
+    @include('html/delivery.html')
+    @include('html/lead.html')
+    @include('html/clients.html')
+    @include('html/reviews.html')
+    @include('html/lead-small.html')
+    @include('html/map.html')
+    @include('html/footer.html')
+  </div>
+
+  @include('html/modals.html')
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -207,7 +207,7 @@
 							alt="кнопка навигации слайдера впёред"></button>
 				</div>
 				<ul class="popular__list swiper-wrapper">
-	<li class="swiper-slide"><div class="product">
+	<li class="popular__slide swiper-slide"><div class="product">
 	<div class="product__images swiper">
 		<ul class="product__images-ghost">
 			<!-- Элементов должно быть столько же сколько и слайдов -->
@@ -258,7 +258,7 @@
 		<a class="product__btn btn-outline-sm" href="#">Купить в розницу</a>
 	</div>
 </div></li>
-	<li class="swiper-slide"><div class="product">
+	<li class="popular__slide swiper-slide"><div class="product">
 	<div class="product__images swiper">
 		<ul class="product__images-ghost">
 			<!-- Элементов должно быть столько же сколько и слайдов -->
@@ -309,7 +309,7 @@
 		<a class="product__btn btn-outline-sm" href="#">Купить в розницу</a>
 	</div>
 </div></li>
-	<li class="swiper-slide"><div class="product">
+	<li class="popular__slide swiper-slide"><div class="product">
 	<div class="product__images swiper">
 		<ul class="product__images-ghost">
 			<!-- Элементов должно быть столько же сколько и слайдов -->
@@ -360,7 +360,7 @@
 		<a class="product__btn btn-outline-sm" href="#">Купить в розницу</a>
 	</div>
 </div></li>
-	<li class="swiper-slide"><div class="product">
+	<li class="popular__slide swiper-slide"><div class="product">
 	<div class="product__images swiper">
 		<ul class="product__images-ghost">
 			<!-- Элементов должно быть столько же сколько и слайдов -->
@@ -411,7 +411,7 @@
 		<a class="product__btn btn-outline-sm" href="#">Купить в розницу</a>
 	</div>
 </div></li>
-	<li class="swiper-slide"><div class="product">
+	<li class="popular__slide swiper-slide"><div class="product">
 	<div class="product__images swiper">
 		<ul class="product__images-ghost">
 			<!-- Элементов должно быть столько же сколько и слайдов -->
@@ -462,7 +462,7 @@
 		<a class="product__btn btn-outline-sm" href="#">Купить в розницу</a>
 	</div>
 </div></li>
-	<li class="swiper-slide"><div class="product">
+	<li class="popular__slide swiper-slide"><div class="product">
 	<div class="product__images swiper">
 		<ul class="product__images-ghost">
 			<!-- Элементов должно быть столько же сколько и слайдов -->
@@ -513,7 +513,7 @@
 		<a class="product__btn btn-outline-sm" href="#">Купить в розницу</a>
 	</div>
 </div></li>
-	<li class="swiper-slide"><div class="product">
+	<li class="popular__slide swiper-slide"><div class="product">
 	<div class="product__images swiper">
 		<ul class="product__images-ghost">
 			<!-- Элементов должно быть столько же сколько и слайдов -->
@@ -564,7 +564,7 @@
 		<a class="product__btn btn-outline-sm" href="#">Купить в розницу</a>
 	</div>
 </div></li>
-	<li class="swiper-slide"><div class="product">
+	<li class="popular__slide swiper-slide"><div class="product">
 	<div class="product__images swiper">
 		<ul class="product__images-ghost">
 			<!-- Элементов должно быть столько же сколько и слайдов -->
@@ -615,7 +615,7 @@
 		<a class="product__btn btn-outline-sm" href="#">Купить в розницу</a>
 	</div>
 </div></li>
-	<li class="swiper-slide"><div class="product">
+	<li class="popular__slide swiper-slide"><div class="product">
 	<div class="product__images swiper">
 		<ul class="product__images-ghost">
 			<!-- Элементов должно быть столько же сколько и слайдов -->
@@ -685,7 +685,7 @@
 	</div>
 	<div class="benefits__content">
 		<div class="benefits__info">
-			<ul class="check-list">
+			<ul class="benefits__list check-list">
 				<li>Анализируем покупательские тренды и спрос для создания актуальных и легко продаваемых моделей</li>
 				<li>Создали сеть взаимозаменяемых поставщиков на случай форсмажоров, чтобы обеспечить выпуск товаров в срок
 				</li>
@@ -766,7 +766,7 @@
 								height="112" alt="">
 						</picture>
 					</div>
-					<div class="how__text">Получите прайс на почту</div>
+					<div class="how__text">Получите прайс на&nbsp;почту</div>
 				</li>
 				<li class="how__item">
 					<div class="how__icon">
@@ -776,7 +776,7 @@
 								height="112" alt="">
 						</picture>
 					</div>
-					<div class="how__text">Наш менеджер свяжется для уточнения деталей</div>
+					<div class="how__text">Примите звонок менеджера</div>
 				</li>
 				<li class="how__item">
 					<div class="how__icon">
@@ -842,7 +842,7 @@
 			</ul>
 			<div class="delivery__tab-content is-active" data-tab="1">
 				<p class="delivery__caption">Бережно доставим ваш заказ в целости и сохранности транспортными компаниями:</p>
-				<div class="delivery__row">
+				<div class="delivery__row delivery__logos">
 					<div class="delivery__col">
 						<div class="delivery__col-content">
 							<div class="delivery__img">
@@ -900,7 +900,7 @@
 			</div>
 			<div class="delivery__tab-content" data-tab="2">
 				<p class="delivery__caption">Вы можете забрать свой заказ самостоятельно:</p>
-				<div class="delivery__row">
+				<div class="delivery__row delivery__addresses">
 					<div class="delivery__col">
 						<div class="delivery__col-content">
 							<div class="delivery__icon">
@@ -953,7 +953,8 @@
 		<div class="lead__wrapper">
 			<div class="lead__inner">
 				<h3 class="lead__title title">Получите оптовый прайс с&nbsp;актуальными ценами на почту</h3>
-				<h4 class="lead__subtitle">Заполните заявку и мы вышлем вам прайс с оптовыми ценами. Наш менеджер поможет
+				<h4 class="lead__subtitle">Заполните заявку и мы вышлем вам прайс с оптовыми ценами. <div></div> Наш менеджер
+					поможет
 					вам подобрать ассортимент и предложит персональную скидку от вашего потенциального объёма.</h4>
 				<div class="lead__content">
 					<div class="lead__img">

@@ -22,10 +22,56 @@
     }
   }
 
-  &__slider {
-    .swiper-slide {
-      width: 210px;
-      box-sizing: border-box;
+  &__slide {
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .popular {
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__slide {
+      width: 190px;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .popular {
+    &__nav {
+      display: none;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__head {
+      margin: 0 -16px 16px;
+      margin-bottom: 16px;
+
+      li {
+        font-size: 12px;
+      }
+    }
+
+    &__slide {
+      width: 116px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .popular {
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__slider {
+      margin-right: -15px;
     }
   }
 }

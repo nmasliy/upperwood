@@ -4,7 +4,9 @@
 .btn-outline,
 .btn-outline-sm,
 .btn-accent-lg {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   outline: none;
   border: 1px solid transparent;
   border-radius: 0;
@@ -64,7 +66,7 @@
 
 .btn-accent-sm,
 .btn-outline-sm {
-  padding: 7px 20px;
+  padding: 7px 15px;
   min-height: 36px;
   font-size: 14px;
 }
@@ -101,6 +103,20 @@
 @media screen and (max-width: 1200px) {
   .btn-primary {
     font-weight: 700;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .btn-accent-lg {
+    padding: 12px 32px;
+    min-height: 48px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .btn-accent-lg {
+    padding: 13px 24px;
     font-size: 14px;
   }
 }

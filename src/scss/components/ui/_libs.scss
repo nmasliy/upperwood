@@ -71,6 +71,7 @@
     border: none;
     border-radius: 0 !important;
     padding: 11px 16px 11px 24px !important;
+    min-height: 48px !important;
     background-color: #fff !important;
   }
 
@@ -83,6 +84,10 @@
     border-radius: 0 !important;
   }
 
+  &__list--single {
+    padding: 0 !important;
+  }
+
   &__item.choices__item--choice {
     @include text-shadow-hover;
 
@@ -93,6 +98,21 @@
   &.is-open {
     &::before {
       transform: rotate(180deg) translateY(calc(-50% + 10px));
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .choices {
+    font-size: 12px !important;
+
+    * {
+      font-size: 12px !important;
+    }
+
+    &__inner {
+      padding: 8px 16px 8px 24px !important;
+      min-height: 36px !important;
     }
   }
 }

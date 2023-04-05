@@ -41,13 +41,22 @@ const heroSwiper = new Swiper('.hero__slider', {
 
 // Popular
 const popularSwiper = new Swiper('.popular__slider', {
-  spaceBetween: 30,
   slidesPerView: 'auto',
   simulateTouch: false,
   navigation: {
     prevEl: '.popular__nav .slider-nav__prev',
     nextEl: '.popular__nav .slider-nav__next'
   },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      spaceBetween: 15,
+    },
+    // when window width is >= 940
+    940: {
+      spaceBetween: 30,
+    }
+  }
 })
 
 // Product
@@ -77,6 +86,16 @@ const benefitsSwiper = new Swiper('.benefits__slider', {
     prevEl: '.benefits__nav .slider-nav__prev',
     nextEl: '.benefits__nav .slider-nav__next'
   },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      spaceBetween: 10,
+    },
+    // when window width is >= 520
+    520: {
+      spaceBetween: 20,
+    }
+  }
 })
 
 

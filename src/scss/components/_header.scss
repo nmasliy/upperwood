@@ -100,7 +100,7 @@
     > a {
       position: relative;
       padding-right: 40px;
-      transition: border-color $transition;
+      transition: color $transition, border-color $transition, text-shadow $transition;
 
       &::after {
         content: "";
@@ -241,8 +241,16 @@
 
       display: flex;
       align-items: center;
+      border-bottom: 2px solid transparent;
       padding: 3px 9px;
       min-height: 48px;
+      transition: color $transition, border-color $transition, text-shadow $transition;
+
+      &:focus,
+      &:active {
+        border-color: $primary-color;
+        color: $primary-color;
+      }
     }
 
     &--lg {
@@ -264,7 +272,7 @@
       border-bottom: 2px solid transparent;
       padding: 8px 16px;
       min-height: 48px;
-      transition: border-color $transition;
+      transition: color $transition, border-color $transition, text-shadow $transition;
 
       &:focus,
       &:active {
@@ -290,7 +298,6 @@
       position: relative;
       border-bottom: 2px solid transparent;
       padding-right: 40px;
-      transition: border-color $transition;
 
       &::after {
         content: "";

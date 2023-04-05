@@ -5,27 +5,38 @@
 	body {
 		padding: 50px 20px;
 		font-size: 22px;
+		min-height: 100vh;
 	}
 
 	li {
 		margin: 5px 0;
 	}
 
-	a {
-		padding: 15px 0;
+	a,
+	button {
+		padding: 12px;
 		display: block;
+	}
+
+	h1 {
+		font-size: 28px;
+		font-weight: 700;
+		margin: 15px 0;
 	}
 </style>
 
 <body>
 
-	<div class="page-wrapper">
-		<ul>
-			<li><a href="index.html" target="_blank">Главная</a></li>
-			<li><a href="search-example-2.html" target="_blank">Поиск большой с переполнением</a></li>
-			<li><a href="search-example.html" target="_blank">Поиск</a></li>
-		</ul>
-	</div>
+	<h1>Страницы:</h1>
+	<ul>
+		<li><a href="index.html" target="_blank">Главная</a></li>
+		<li><a href="search-example-2.html" target="_blank">Поиск</a></li>
+		<li><a href="search-example.html" target="_blank">Поиск большой с переполнением</a></li>
+	</ul>
+	<h1>Модальные окна:</h1>
+	<ul>
+		<li><button class="btn-accent" data-modal-open="modal-price">Получить оптовый прайс</button></li>
+	</ul>
 
 	@include('html/modals.html')
 	<script src="js/main.js"></script>

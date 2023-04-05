@@ -16,27 +16,38 @@
 	body {
 		padding: 50px 20px;
 		font-size: 22px;
+		min-height: 100vh;
 	}
 
 	li {
 		margin: 5px 0;
 	}
 
-	a {
-		padding: 15px 0;
+	a,
+	button {
+		padding: 12px;
 		display: block;
+	}
+
+	h1 {
+		font-size: 28px;
+		font-weight: 700;
+		margin: 15px 0;
 	}
 </style>
 
 <body>
 
-	<div class="page-wrapper">
-		<ul>
-			<li><a href="index.html" target="_blank">Главная</a></li>
-			<li><a href="search-example-2.html" target="_blank">Поиск большой с переполнением</a></li>
-			<li><a href="search-example.html" target="_blank">Поиск</a></li>
-		</ul>
-	</div>
+	<h1>Страницы:</h1>
+	<ul>
+		<li><a href="index.html" target="_blank">Главная</a></li>
+		<li><a href="search-example-2.html" target="_blank">Поиск</a></li>
+		<li><a href="search-example.html" target="_blank">Поиск большой с переполнением</a></li>
+	</ul>
+	<h1>Модальные окна:</h1>
+	<ul>
+		<li><button class="btn-accent" data-modal-open="modal-price">Получить оптовый прайс</button></li>
+	</ul>
 
 	<div class="modal modal-price" id="modal-price" aria-hidden="true">
 	<div class="modal__wrapper">
@@ -77,6 +88,13 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="modal__close" data-modal-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M17.3996 2.2921L15.7076 0.600098L8.99961 7.3081L2.29161 0.600098L0.599609 2.2921L7.30761 9.0001L0.599609 15.7081L2.29161 17.4001L8.99961 10.6921L15.7076 17.4001L17.3996 15.7081L10.6916 9.0001L17.3996 2.2921Z"
+						fill="white" />
+				</svg>
 			</div>
 		</div>
 	</div>

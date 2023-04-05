@@ -2,30 +2,111 @@
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 5;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, 0.5);
+  opacity: 0;
+  transition: $menu-transition;
+
+  &.is-active {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 940px) {
   .menu {
     position: fixed;
-    right: 0;
+    left: 0;
     top: 0;
     bottom: 0;
     z-index: 8;
     flex-direction: column;
     align-items: center;
     overflow: auto;
-    padding: 140px 15px 80px;
+    padding-bottom: 20px;
     width: 100%;
-    max-width: 350px;
+    height: 100%;
+    max-width: 320px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.6;
     background: #fff;
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(-100%);
     transition: $menu-transition;
 
-    &__nav {
-      font-size: 20px;
+    &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 11px 7px 13px;
+    }
 
+    &__logo {
+      picture {
+        display: flex;
+      }
+
+      img {
+        width: 77px;
+      }
+    }
+
+    &__nav {
       a {
         display: block;
-        padding: 12px;
+        border-bottom: 2px solid transparent;
+        padding: 9px 16px 6px;
+      }
+    }
+
+    &__catalog {
+      > a {
+        color: #fff;
+        background-color: $primary-color;
+
+        &::after {
+          background: url("../img/chevron-down-white-icon.svg") center no-repeat;
+        }
+      }
+    }
+
+    &__submenu {
+      > a {
+        &::after {
+          background: url("../img/chevron-down-icon.svg") center no-repeat;
+        }
+      }
+
+      &.is-active {
+        > ul > li:last-child a {
+          border-color: rgba(49, 56, 150, 10%);
+        }
+
+        > a {
+          border-color: $primary-color;
+          color: $primary-color;
+        }
+      }
+    }
+
+    .submenu {
+      > ul {
+        display: none;
+      }
+
+      &.is-active {
+        > ul {
+          display: block;
+        }
       }
     }
 
@@ -33,24 +114,29 @@
       opacity: 1;
       transform: translateX(0);
     }
-  }
 
-  .overlay {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 5;
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(#000, 0.5);
-    opacity: 0;
-    transition: $menu-transition;
+    &__catalog,
+    &__submenu {
+      > a {
+        position: relative;
+        transition: color, border-color $transition;
 
-    &.is-active {
-      opacity: 1;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 14px;
+          top: 50%;
+          width: 12px;
+          height: 8px;
+          transform: translateY(-50%);
+        }
+      }
+
+      &.is-active {
+        > a::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
     }
   }
 }

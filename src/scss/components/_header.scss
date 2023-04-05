@@ -12,14 +12,12 @@
     justify-content: space-between;
   }
 
-  &__logo-wrapper {
-    display: flex;
-    align-items: center;
-  }
-
   &__logo {
-    display: flex;
     margin-right: 24px;
+
+    picture {
+      display: flex;
+    }
 
     img {
       width: 197px;
@@ -27,6 +25,7 @@
   }
 
   &__caption {
+    margin-right: auto;
     max-width: 163px;
   }
 
@@ -49,6 +48,7 @@
 
   &__main-inner {
     display: flex;
+    align-items: center;
   }
 
   &__catalog {
@@ -58,14 +58,17 @@
 
     a {
       display: block;
-      font-weight: 600;
-    }
-
-    a:not(.header__catalog-btn) {
-      padding: 9px 16px;
+      border-bottom: 2px solid transparent;
+      padding: 8px 16px;
       min-height: 48px;
+      font-weight: 600;
       text-shadow: 0 4px 16px transparent;
       transition: $transition;
+
+      &:focus,
+      &:active {
+        border-color: $primary-color;
+      }
 
       @include hover {
         text-shadow: 0 4px 16px rgba(55, 87, 214, 60%);
@@ -79,7 +82,12 @@
       min-width: 210px;
     }
 
-    @include hover {
+    &.is-active {
+      > a {
+        border-color: $primary-color;
+        color: $primary-color;
+      }
+
       > ul {
         display: block;
       }
@@ -91,7 +99,6 @@
 
     > a {
       position: relative;
-      border-bottom: 2px solid transparent;
       padding-right: 40px;
       transition: border-color $transition;
 
@@ -103,12 +110,12 @@
         width: 12px;
         height: 8px;
         background: url("../img/chevron-down-icon.svg") center no-repeat;
-        transform: translateY(-50%);
+        transform: translateY(-50%) rotate(-90deg);
       }
     }
 
     li > a {
-      padding: 11px 16px;
+      padding: 10px 16px;
       font-weight: 400;
       font-size: 16px;
     }
@@ -117,13 +124,14 @@
       @include submenu-right;
     }
 
-    @include hover {
-      > ul {
-        display: block;
-      }
-
+    &.is-active {
       > a {
         border-color: $primary-color;
+        color: $primary-color;
+      }
+
+      > ul {
+        display: block;
       }
     }
   }
@@ -136,7 +144,6 @@
     input {
       @include reset-search-input;
 
-      -webkit-appearance: none;
       appearance: none;
       display: block;
       outline: none;
@@ -154,6 +161,15 @@
         color: $secondary-color;
       }
 
+      &:invalid {
+        border-color: #fd2020;
+      }
+
+      &:focus,
+      &:active {
+        border-color: $accent-color;
+      }
+
       @include hover {
         border-color: rgba(0, 0, 0, 30%);
 
@@ -165,16 +181,6 @@
         &:active {
           border-color: $accent-color;
         }
-      }
-
-      /* stylelint-disable-next-line order/order */
-      &:invalid {
-        border-color: #fd2020;
-      }
-
-      &:focus,
-      &:active {
-        border-color: $accent-color;
       }
     }
 
@@ -238,6 +244,10 @@
       padding: 3px 9px;
       min-height: 48px;
     }
+
+    &--lg {
+      min-width: 400px;
+    }
   }
 
   &__nav {
@@ -249,9 +259,11 @@
     a {
       @include text-shadow-hover;
 
-      display: block;
+      display: flex;
+      align-items: center;
       border-bottom: 2px solid transparent;
-      padding: 9px 16px;
+      padding: 8px 16px;
+      min-height: 48px;
       transition: border-color $transition;
 
       &:focus,
@@ -289,6 +301,7 @@
         height: 8px;
         background: url("../img/chevron-down-icon.svg") center no-repeat;
         transform: translateY(-50%);
+        transition: transform $transition;
       }
     }
 
@@ -296,13 +309,179 @@
       opacity: 0.5;
     }
 
-    @include hover {
+    &.is-active {
       > a {
         border-color: $primary-color;
+        color: $primary-color;
+
+        &::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
       }
 
       > ul {
         display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1336px) {
+  .header {
+    &__nav {
+      li:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    &__catalog a {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+
+    &__nav {
+      font-weight: 700;
+      font-size: 14px;
+
+      a {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+      > ul > li {
+        @include mr(0);
+      }
+    }
+
+    &__catalog-submenu {
+      a {
+        padding-right: 35px;
+      }
+
+      li > a {
+        font-size: 14px;
+      }
+    }
+
+    &__nav-submenu {
+      li > a {
+        border-bottom: 1px solid rgba(49, 56, 150, 10%);
+      }
+
+      > a {
+        padding-right: 35px;
+      }
+    }
+
+    &__search-box {
+      margin-right: 0;
+    }
+
+    &__info li {
+      @include mr(32px);
+    }
+
+    &__top {
+      font-size: 12px;
+    }
+
+    &__logo {
+      margin-right: 16px;
+
+      img {
+        width: 124px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .header {
+    &__burger {
+      margin-right: 30px;
+    }
+
+    &__main {
+      padding: 14px 0;
+    }
+
+    &__info-hidden-sm {
+      display: none;
+    }
+
+    &__top {
+      padding: 16px 0;
+      font-size: 10px;
+    }
+
+    &__logo {
+      img {
+        width: 96px;
+      }
+    }
+
+    &__caption {
+      max-width: 117px;
+    }
+
+    &__search-box input {
+      padding-left: 40px;
+      font-size: 10px;
+      background-position: left 11px center;
+      background-size: 17px;
+
+      &::placeholder {
+        color: $text-color;
+      }
+    }
+
+    &__nav,
+    &__catalog {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .header {
+    &__logo {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &__top {
+      font-size: 8px;
+    }
+
+    &__top-inner {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__caption {
+      width: 33%;
+    }
+
+    &__info {
+      min-width: 50%;
+
+      ul {
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+
+      li {
+        @include mr(2px);
+
+        &:last-child {
+          font-weight: 700;
+          font-size: 10px;
+          text-align: right;
+        }
       }
     }
   }

@@ -108,8 +108,8 @@
 
 @mixin submenu-right {
   position: absolute;
-  left: 100%;
-  top: 1px;
+  left: calc(100% - 1px);
+  top: 0;
   display: none;
   width: max-content;
   min-width: 192px;
@@ -119,12 +119,12 @@
 }
 
 @mixin reset-search-input {
-  ::-webkit-search-decoration,
-  ::-webkit-search-cancel-button,
-  ::-webkit-search-results-button,
-  ::-webkit-outer-spin-button,
-  ::-webkit-inner-spin-button,
-  ::-webkit-search-results-decoration {
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button,
+  &::-webkit-search-results-decoration {
     display: none;
   }
 }

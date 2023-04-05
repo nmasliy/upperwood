@@ -1,7 +1,7 @@
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 Swiper.use([Navigation, Pagination, Autoplay]);
 
-function initMobileSlider(parent, wrapper, items, breakpoint = 1024, options) {
+function initMobileSlider(parent, wrapper, items, breakpoint = 940, options) {
   if (!options) {
     options = {
       slidesPerView: 'auto',
@@ -61,7 +61,7 @@ productSliders.forEach(el => {
     },
   })
 
-  if (window.innerWidth > 1024) {
+  if (window.innerWidth > 940) {
     const ghosts = el.querySelectorAll('.product__images-ghost li');
 
     ghosts.forEach((el, i) => el.addEventListener('mouseover', () => productSwiper.slideTo(i)));

@@ -1,6 +1,6 @@
 .burger {
   $burger-width: 18px;
-  $burger-height: 14px;
+  $burger-height: 12px;
   $burger-line-height: 2px;
 
   position: relative;
@@ -9,7 +9,7 @@
   padding: 0;
   width: $burger-width;
   height: $burger-height;
-  color: $white-color;
+  color: $primary-color;
   background-color: transparent;
   cursor: pointer;
 
@@ -47,9 +47,8 @@
     transition: transform $menu-transition;
   }
 
-  &.is-active {
-    z-index: 9;
-
+  &.is-active,
+  &--close {
     &::before {
       top: 50%;
       transform: rotate(45deg);
@@ -69,7 +68,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 940px) {
   .burger {
     display: block;
   }

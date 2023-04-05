@@ -5,10 +5,11 @@
   &__double {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
     gap: 30px;
 
     .form__item {
-      margin-bottom: 30px;
+      @include mb(0);
     }
   }
 
@@ -59,7 +60,7 @@
   }
 
   &__main {
-    margin-bottom: 24px;
+    margin-bottom: 48px;
   }
 
   &__btn {
@@ -79,10 +80,6 @@
 
 @media screen and (max-width: 1200px) {
   .form {
-    &__main {
-      margin-bottom: 48px;
-    }
-
     &__btn {
       margin-bottom: 16px;
     }
@@ -107,6 +104,15 @@
       textarea {
         padding: 7px 24px 8px;
         font-size: 12px;
+      }
+    }
+
+    &__double {
+      display: block;
+      margin-bottom: 24px;
+
+      .form__item {
+        @include mb(12px);
       }
     }
   }

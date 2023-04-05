@@ -79,6 +79,12 @@
       max-width: 960px;
     }
   }
+
+  .lead-small {
+    &__inner {
+      max-width: 770px;
+    }
+  }
 }
 
 @media screen and (max-width: 940px) {
@@ -112,10 +118,17 @@
       text-align: left;
     }
 
-
-
     .container {
       padding: 0;
+    }
+  }
+
+  .lead-small {
+    .lead {
+      &__title,
+      &__subtitle {
+        text-align: center;
+      }
     }
   }
 }

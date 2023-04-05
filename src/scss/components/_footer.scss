@@ -5,12 +5,16 @@
 
   &__main {
     display: grid;
-    grid-template-columns: 265px 236px 184px 230px 255px;
+    grid-template-columns: repeat(5, auto);
     margin-bottom: 33px;
     gap: 45px;
   }
 
   &__col {
+    &-buttons {
+      display: none;
+    }
+
     > ul {
       font-size: 16px;
 
@@ -27,6 +31,10 @@
     li {
       @include mb(2px);
     }
+  }
+
+  &__col-terms {
+    display: none;
   }
 
   &__col-caption {
@@ -87,14 +95,215 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1366px) {
+  .footer__main {
+    gap: 30px 22px;
+  }
+}
 
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding: 64px 0 35px;
+
+    &__main {
+      grid-template-columns: repeat(4, auto);
+    }
+
+    &__buttons {
+      display: none;
+      margin-left: auto;
+      max-width: 434px;
+    }
+
+    &__bottom {
+      font-size: 8px;
+    }
+
+    &__col > ul {
+      font-size: 14px;
+    }
+
+    &__col-caption {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    &__col-buttons {
+      display: block;
+      order: 6;
+      grid-column: span 3;
+
+      .footer__buttons {
+        display: flex;
+      }
+    }
+
+    &__col-socials {
+      order: 5;
+    }
+
+    &__links {
+      li {
+        @include mr(96px);
+      }
+    }
+
+    &__btn {
+      @include mb(0);
+      @include mr(12px);
+
+      padding: 13px;
+
+      &.btn-accent {
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 940px) {
+  .footer {
+    padding: 22px 0 30px;
 
+    &__main {
+      grid-template-columns: repeat(3, auto);
+      margin-bottom: 10px;
+      gap: 38px;
+    }
+
+    &__links {
+      justify-content: space-between;
+      width: 60%;
+
+      li {
+        @include mr(15px);
+      }
+    }
+
+    &__col {
+      > ul {
+        font-size: 12px;
+      }
+    }
+
+    &__col-caption {
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    &__col-terms {
+      display: block;
+    }
+
+    &__cookie {
+      display: none;
+    }
+
+    &__bottom {
+      border: none;
+    }
+
+    &__col-extra,
+    &__col-socials,
+    &__col-buttons,
+    &__col-master {
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: 520px) {
+  .footer {
+    padding: 0 0 16px;
 
+    .container {
+      padding: 0;
+    }
+
+    &__bottom {
+      flex-direction: row-reverse;
+      padding: 0 16px;
+      font-size: 12px;
+    }
+
+    &__links {
+      flex-direction: column;
+      margin-right: 13px;
+      width: 100%;
+
+      li {
+        @include mr(0);
+      }
+
+      a {
+        display: block;
+        padding: 4px 0;
+      }
+    }
+
+    &__copy {
+      margin-right: 0;
+      max-width: 91px;
+      font-size: 8px;
+    }
+
+    &__main {
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    &__cookie {
+      @include mr(0);
+
+      display: block;
+      order: 5;
+    }
+
+    &__col-caption {
+      position: relative;
+      margin-bottom: 0;
+      padding: 8px 40px 8px 16px;
+      font-size: 12px;
+      transition: color $transition;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        width: 12px;
+        height: 8px;
+        background: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41 -7.62939e-08L6 4.59L10.59 -7.62939e-08L12 1.42L6 7.42L0 1.42L1.41 -7.62939e-08Z' fill='%23ffffff' fill-opacity='0.9'/%3E%3C/svg%3E%0A") center no-repeat;
+        transform: translateY(-50%);
+        transition: background $transition, transform $transition;
+      }
+    }
+
+    &__col {
+      > ul {
+        display: none;
+        font-size: 12px;
+      }
+
+      li a {
+        padding: 8px 16px;
+      }
+
+      &.is-active {
+        > ul {
+          display: block;
+        }
+
+        .footer__col-caption {
+          color: #91b3fa;
+
+          &::after {
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41 -7.62939e-08L6 4.59L10.59 -7.62939e-08L12 1.42L6 7.42L0 1.42L1.41 -7.62939e-08Z' fill='%2391B3FA' fill-opacity='0.9'/%3E%3C/svg%3E%0A");
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
+      }
+    }
+  }
 }

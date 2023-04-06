@@ -1,7 +1,4 @@
 .delivery {
-  &__inner {
-  }
-
   &__title {
     margin-bottom: 64px;
   }
@@ -60,6 +57,11 @@
     border: 2px solid rgba($primary-color, 0.1);
     padding: 30px;
     background: rgba(#fff, 0.8);
+    transition: box-shadow $transition;
+
+    @include hover {
+      box-shadow: 2px 0 4px rgba(55, 87, 214, 24%), 0 4px 8px rgba(55, 87, 214, 16%);
+    }
   }
 
   &__col-content {

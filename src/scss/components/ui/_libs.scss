@@ -84,6 +84,12 @@
     border-radius: 0 !important;
   }
 
+  &__list--dropdown {
+    .choices__placeholder {
+      display: none !important;
+    }
+  }
+
   &__list--single {
     padding: 0 !important;
   }
@@ -91,8 +97,13 @@
   &__item.choices__item--choice {
     @include text-shadow-hover;
 
-    padding: 11px 16px !important;
+    padding: 15px 16px 15px 24px !important;
     background-color: #fff !important;
+  }
+
+  .choices__list--dropdown .choices__list,
+  .choices__list[aria-expanded] .choices__list {
+    max-height: 335px !important;
   }
 
   &.is-open {

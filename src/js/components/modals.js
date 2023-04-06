@@ -12,3 +12,13 @@ const options = {
 const modals = new SimpleModal(options);
 
 modals.init();
+
+window.modals = modals;
+
+const forms = document.querySelectorAll('.modal form');
+
+forms.forEach(form => {
+  form.addEventListener('submit', (e) => {
+
+  })
+})

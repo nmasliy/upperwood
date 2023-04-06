@@ -87,7 +87,12 @@
   }
 
   .modal-price__title {
-    max-width: 718px;
+    max-width: 589px;
+  }
+
+  &__inner--lg {
+    padding: 64px 40px;
+    max-width: 1200px;
   }
 }
 

@@ -8,17 +8,17 @@
 		min-height: 100vh;
 	}
 
-	li {
+	.wrap li {
 		margin: 5px 0;
 	}
 
-	a,
-	button {
+	.wrap a,
+	.wrap button {
 		padding: 12px;
 		display: block;
 	}
 
-	h1 {
+	.wrap h1 {
 		font-size: 28px;
 		font-weight: 700;
 		margin: 15px 0;
@@ -27,16 +27,26 @@
 
 <body>
 
-	<h1>Страницы:</h1>
-	<ul>
-		<li><a href="index.html" target="_blank">Главная</a></li>
-		<li><a href="search-example-2.html" target="_blank">Поиск</a></li>
-		<li><a href="search-example.html" target="_blank">Поиск большой с переполнением</a></li>
-	</ul>
-	<h1>Модальные окна:</h1>
-	<ul>
-		<li><button class="btn-accent" data-modal-open="modal-price">Получить оптовый прайс</button></li>
-	</ul>
+	<div class="wrap">
+		<h1>Страницы:</h1>
+		<ul>
+			<li><a href="index.html" target="_blank">Главная</a></li>
+			<li><a href="search-example-2.html" target="_blank">Поиск</a></li>
+			<li><a href="search-example.html" target="_blank">Поиск большой с переполнением</a></li>
+			<li><a href="cookies.html" target="_blank">Cookies</a></li>
+			<hr>
+			<li><a href="delivery.html" target="_blank">Доставка</a></li>
+		</ul>
+		<h1>Модальные окна:</h1>
+		<ul>
+			<li><button class="btn-accent" data-modal-open="modal-price">Получить оптовый прайс</button></li>
+			<li><button class="btn-accent" data-modal-open="modal-call">Обратный звонок</button></li>
+			<li><button class="btn-accent" data-modal-open="modal-message">Написать письмо</button></li>
+			<li><button class="btn-accent" data-modal-open="modal-thanks">Спасибо обратный звонок</button></li>
+			<li><button class="btn-accent" data-modal-open="modal-thanks-price">Спасибо оптовый прайс</button></li>
+			<hr>
+		</ul>
+	</div>
 
 	@include('html/modals.html')
 	<script src="js/main.js"></script>

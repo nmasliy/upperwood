@@ -1,0 +1,10 @@
+<script>
+  function onSubmit() {
+    window.modals.closeAll();
+    
+    setTimeout(function() {
+      window.modals.open('modal-thanks');
+    }, window.modals.options.transition + 10)
+  }
+</script>
+<script src="js/main.js"></script>

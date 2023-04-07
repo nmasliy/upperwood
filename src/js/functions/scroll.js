@@ -3,10 +3,10 @@
 
 	window.addEventListener('scroll', (e) => {
 		if (window.scrollY >= 50) {
-			header.classList.add('is-fixed');
+			header?.classList.add('is-fixed');
 		}
 		else {
-			header.classList.remove('is-fixed');
+			header?.classList.remove('is-fixed');
 		}
 	})
 })();

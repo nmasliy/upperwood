@@ -1,9 +1,10 @@
 .btn-primary,
 .btn-accent,
 .btn-accent-sm,
+.btn-accent-lg,
 .btn-outline,
 .btn-outline-sm,
-.btn-accent-lg {
+.btn-outline-lg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +73,8 @@
 }
 
 .btn-outline,
-.btn-outline-sm {
+.btn-outline-sm,
+.btn-outline-lg {
   border-color: #313896;
   box-shadow: 2px 0 4px rgba(55, 87, 214, 0%), 0 4px 8px rgba(55, 87, 214, 0%);
   color: $primary-color;
@@ -95,7 +97,8 @@
   }
 }
 
-.btn-accent-lg {
+.btn-accent-lg,
+.btn-outline-lg {
   padding: 16px 32px;
   min-height: 56px;
 }
@@ -108,6 +111,12 @@
 }
 
 @media screen and (max-width: 940px) {
+  .btn-outline-lg {
+    padding: 8px 12px;
+    min-height: 36px;
+    font-size: 12px;
+  }
+
   .btn-accent-lg {
     padding: 12px 32px;
     min-height: 48px;

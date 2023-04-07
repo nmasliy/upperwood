@@ -10,6 +10,6 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 // Кастомный скроллбар
 const scrollBarContainers = document.querySelectorAll('.perfect-scrollbar');
 
-scrollBarContainers.forEach(el => {
+scrollBarContainers?.forEach(el => {
   const ps = new PerfectScrollbar(el);
 })

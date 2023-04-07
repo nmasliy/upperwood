@@ -19,17 +19,17 @@
 		min-height: 100vh;
 	}
 
-	li {
+	.wrap li {
 		margin: 5px 0;
 	}
 
-	a,
-	button {
+	.wrap a,
+	.wrap button {
 		padding: 12px;
 		display: block;
 	}
 
-	h1 {
+	.wrap h1 {
 		font-size: 28px;
 		font-weight: 700;
 		margin: 15px 0;
@@ -38,16 +38,26 @@
 
 <body>
 
-	<h1>Страницы:</h1>
-	<ul>
-		<li><a href="index.html" target="_blank">Главная</a></li>
-		<li><a href="search-example-2.html" target="_blank">Поиск</a></li>
-		<li><a href="search-example.html" target="_blank">Поиск большой с переполнением</a></li>
-	</ul>
-	<h1>Модальные окна:</h1>
-	<ul>
-		<li><button class="btn-accent" data-modal-open="modal-price">Получить оптовый прайс</button></li>
-	</ul>
+	<div class="wrap">
+		<h1>Страницы:</h1>
+		<ul>
+			<li><a href="index.html" target="_blank">Главная</a></li>
+			<li><a href="search-example-2.html" target="_blank">Поиск</a></li>
+			<li><a href="search-example.html" target="_blank">Поиск большой с переполнением</a></li>
+			<li><a href="cookies.html" target="_blank">Cookies</a></li>
+			<hr>
+			<li><a href="delivery.html" target="_blank">Доставка</a></li>
+		</ul>
+		<h1>Модальные окна:</h1>
+		<ul>
+			<li><button class="btn-accent" data-modal-open="modal-price">Получить оптовый прайс</button></li>
+			<li><button class="btn-accent" data-modal-open="modal-call">Обратный звонок</button></li>
+			<li><button class="btn-accent" data-modal-open="modal-message">Написать письмо</button></li>
+			<li><button class="btn-accent" data-modal-open="modal-thanks">Спасибо обратный звонок</button></li>
+			<li><button class="btn-accent" data-modal-open="modal-thanks-price">Спасибо оптовый прайс</button></li>
+			<hr>
+		</ul>
+	</div>
 
 	<div class="modal modal-price" id="modal-price" aria-hidden="true">
 	<div class="modal__wrapper">
@@ -165,6 +175,141 @@
 		</div>
 	</div>
 </div>
+
+<div class="modal modal-thanks" id="modal-thanks" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner modal-thanks__inner">
+			<div class="modal__content">
+				<div class="modal__img">
+					<img src="img/thanks.svg" width="250" height="159" alt="">
+				</div>
+				<div class="modal__title modal__title--primary">Спасибо</div>
+				<div class="modal__subtitle">Номер вашего обращения #5664</div>
+				<p>
+					В ближайшее время менеджер свяжется с&nbsp;вами и ответит на&nbsp;все&nbsp;вопросы.
+				</p>
+				<p>
+					График работы наших менеджеров (по московскому времени): <br>
+					Понедельник-пятница с 8:00–17:00 <br> 
+					Суббота, воскресенье — выходные <br>
+					</ul>
+				</p>
+				<div class="modal__caption">Если мы не перезвонили вам в течение дня, возможно, сегодня выходной или праздничный день, мы свяжемся с вами в понедельник или другой рабочий день</div>
+				<a class="modal__btn btn-outline-lg" href="./">Вернуться на главную</a>
+			</div>
+			<div class="modal__close" data-modal-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M17.3996 2.2921L15.7076 0.600098L8.99961 7.3081L2.29161 0.600098L0.599609 2.2921L7.30761 9.0001L0.599609 15.7081L2.29161 17.4001L8.99961 10.6921L15.7076 17.4001L17.3996 15.7081L10.6916 9.0001L17.3996 2.2921Z" fill="#313896"/>
+					</svg>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-thanks" id="modal-thanks-price" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner modal-thanks__inner">
+			<div class="modal__content">
+				<div class="modal__img">
+					<img src="img/thanks.svg" width="250" height="159" alt="">
+				</div>
+				<div class="modal__title modal__title--primary">Спасибо за заявку</div>
+				<div class="modal__subtitle">Номер вашего обращения #5664</div>
+				<p>
+					Ваш запрос отправлен успешно. <br>
+Мы отправим вам оптовый прайс на указанную почту в&nbsp;ближайшее время.
+				</p>
+				<p>
+					График работы наших менеджеров (по московскому времени): <br>
+					Понедельник-пятница с 8:00–17:00 <br> 
+					Суббота, воскресенье — выходные <br>
+					</ul>
+				</p>
+				<div class="modal__caption">Если на вашу почту не придёт прайс в течение одного рабочего дня, возможно, вы указали неверный почтовый адрес. Отправьте ещё раз ваш запрос на почту, которая указана в контактах на сайте: <a href="#" target="_blank">optmebelit@yandex.ru</a></div>
+				<a class="modal__btn btn-outline-lg" href="./">Вернуться на главную</a>
+			</div>
+			<div class="modal__close" data-modal-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M17.3996 2.2921L15.7076 0.600098L8.99961 7.3081L2.29161 0.600098L0.599609 2.2921L7.30761 9.0001L0.599609 15.7081L2.29161 17.4001L8.99961 10.6921L15.7076 17.4001L17.3996 15.7081L10.6916 9.0001L17.3996 2.2921Z" fill="#313896"/>
+					</svg>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal--bg-primary modal-call" id="modal-call" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner modal-call__inner">
+			<div class="modal__title modal__title--offset">Обратный звонок</div>
+			<form action="#" class="modal__form form">
+				<div class="form__main">
+					<div class="form__item">
+						<input type="text" placeholder="Введите ФИО*">
+					</div>
+					<div class="form__item">
+						<input class="input-phone" type="text" placeholder="Введите номер телефона*">
+					</div>
+					<div class="form__item">
+						<textarea placeholder="Комментарий"></textarea>
+					</div>
+				</div>
+				<div class="form__footer">
+					<button class="form__btn btn-accent-lg">Отправить сообщение</button>
+					<div class="form__caption">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+				</div>
+			</form>
+			<div class="modal__close" data-modal-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M17.3996 2.2921L15.7076 0.600098L8.99961 7.3081L2.29161 0.600098L0.599609 2.2921L7.30761 9.0001L0.599609 15.7081L2.29161 17.4001L8.99961 10.6921L15.7076 17.4001L17.3996 15.7081L10.6916 9.0001L17.3996 2.2921Z"
+						fill="white" />
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal--bg-primary modal-message" id="modal-message" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner modal-call__inner">
+			<div class="modal__title modal__title--offset">Написать письмо</div>
+			<form action="#" class="modal__form form">
+				<div class="form__main">
+					<div class="form__item">
+						<input type="text" placeholder="Введите ФИО*">
+					</div>
+					<div class="form__item">
+						<input class="input-phone" type="text" placeholder="Введите номер телефона*">
+					</div>
+					<div class="form__item">
+						<input type="email" placeholder="Введите почту">
+					</div>
+					<div class="form__item">
+						<textarea placeholder="Текст сообщения"></textarea>
+					</div>
+					<div class="form__item">
+						<label class="form__file">
+							<input type="file">
+							<span>Прикрепить файл</span>
+						</label>
+					</div>
+				</div>
+				<div class="form__footer">
+					<button class="form__btn btn-accent-lg">Отправить сообщение</button>
+					<div class="form__caption">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+				</div>
+			</form>
+			<div class="modal__close" data-modal-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M17.3996 2.2921L15.7076 0.600098L8.99961 7.3081L2.29161 0.600098L0.599609 2.2921L7.30761 9.0001L0.599609 15.7081L2.29161 17.4001L8.99961 10.6921L15.7076 17.4001L17.3996 15.7081L10.6916 9.0001L17.3996 2.2921Z"
+						fill="white" />
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+
 	<script src="js/main.js"></script>
 </body>
 

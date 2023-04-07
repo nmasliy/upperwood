@@ -3,10 +3,7 @@ import SimpleModal from '../functions/SimpleModal';
 const options = {
   onOpen: (modal) => {},
   onClose: (modal) => {},
-  disableScroll: true,
   transition: 250,
-  nested: false,
-  overlayCloseAll: true,
 };
 
 const modals = new SimpleModal(options);
@@ -15,10 +12,19 @@ modals.init();
 
 window.modals = modals;
 
-const forms = document.querySelectorAll('.modal form');
+if (document.querySelector('.cookies')) {
+  initCookie();
+}
 
-forms.forEach(form => {
-  form.addEventListener('submit', (e) => {
-
-  })
-})
+function initCookie() {
+  const cookieBtn = document.querySelector(".cookies__btn");
+  const cookiePopup = document.querySelector(".cookies");
+  
+  window.addEventListener("DOMContentLoaded", () => {
+    cookiePopup.classList.add("is-active");
+  });
+  
+  cookieBtn.addEventListener("click", (e) => {
+    cookiePopup.classList.remove("is-active");
+  });
+}

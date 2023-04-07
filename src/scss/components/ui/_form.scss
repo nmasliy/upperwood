@@ -57,6 +57,46 @@
         border-color: $accent-color;
       }
     }
+
+    textarea {
+      min-height: 116px;
+      resize: none;
+    }
+  }
+
+  &__file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed $primary-color;
+    padding: 10px;
+    min-height: 96px;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+
+    span {
+      position: relative;
+      display: block;
+      padding-left: 50px;
+      font-size: 16px;
+      color: $primary-color;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 48px;
+        height: 48px;
+        background: url("../img/attachment-icon.svg") center no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+
+    input {
+      display: none;
+    }
   }
 
   &__main {
@@ -88,6 +128,19 @@
 
 @media screen and (max-width: 940px) {
   .form {
+    &__btn {
+      margin-bottom: 8px;
+    }
+
+    &__file {
+      min-height: 64px;
+
+      span {
+        padding-left: 40px;
+        font-size: 12px;
+      }
+    }
+
     &__main {
       margin-bottom: 24px;
     }

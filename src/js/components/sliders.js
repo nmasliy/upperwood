@@ -124,3 +124,6 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
     },
   },
 });
+
+// Brands
+initMobileSlider('.brands__slider', '.brands__list', '.brands__item', 520);

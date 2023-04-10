@@ -1,0 +1,101 @@
+.addresses-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba($primary-color, 0.1);
+    padding: 0 15px 20px;
+    min-height: 220px;
+    font-size: 18px;
+    text-align: center;
+    background: rgba(#fff, 0.8);
+    transition: box-shadow $transition;
+
+    @include hover {
+      box-shadow: 2px 0 4px rgba(55, 87, 214, 24%), 0 4px 8px rgba(55, 87, 214, 16%);
+    }
+  }
+
+  &__title {
+    margin-bottom: 2px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 88px;
+    height: 88px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .addresses-box {
+    &__item {
+      padding: 10px 5px 32px;
+      min-height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .addresses-box {
+    gap: 20px;
+
+    &__item {
+      padding: 0 5px 26px;
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+
+    &__icon {
+      width: 64px;
+      height: 64px;
+
+      img {
+        width: 23px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .addresses-box {
+    display: flex;
+    overflow: auto;
+    margin-right: -15px;
+    padding-right: 15px;
+    gap: 0;
+
+    &__item {
+      @include mr(10px);
+
+      padding: 0 5px 2px;
+      min-width: 130px;
+    }
+
+    &__title {
+      font-size: 12px;
+    }
+
+    &__icon {
+      width: 48px;
+      height: 48px;
+
+      img {
+        width: 17px;
+      }
+    }
+  }
+}

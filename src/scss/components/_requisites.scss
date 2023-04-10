@@ -1,0 +1,195 @@
+.requisites {
+  color: #fff;
+
+  &__title {
+    display: inline-block;
+    clip-path: polygon(0 0, 72% 0, 100% 100%, 0% 100%);
+    margin-bottom: -1px;
+    padding: 22px 120px 22px 54px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+    background-color: $primary-color;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: auto 240px;
+    background-color: $primary-color;
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 130px 38px 130px 54px;
+  }
+
+  &__box {
+    width: 100%;
+    max-width: 546px;
+  }
+
+  &__row {
+    @include mb(20px);
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__key {
+    margin-right: 8px;
+    width: 100%;
+    max-width: 122px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  &__value {
+    width: 100%;
+    max-width: 268px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  &__download {
+    display: flex;
+    flex-direction: column;
+    background-color: $accent-color;
+  }
+
+  &__download-item {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 136px 40px 52px;
+    font-size: 16px;
+    text-align: center;
+    color: $text-color;
+    background-color: $accent-color;
+    transition: box-shadow $transition, background-color $transition;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 62px;
+      width: 48px;
+      height: 60px;
+      background: url("../img/download-icon.svg") center no-repeat;
+      transform: translateX(-50%);
+    }
+
+    &:focus,
+    &:active {
+      background-color: $orange-color;
+    }
+
+    @include hover {
+      box-shadow: 0 12px 24px rgba(128, 66, 0, 35%);
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .requisites {
+    &__content {
+      grid-template-columns: auto 210px;
+    }
+
+    &__title {
+      padding: 22px 186px 22px 79px;
+    }
+
+    &__download-item {
+      padding: 136px 30px 52px;
+    }
+
+    &__table {
+      display: block;
+      padding: 32px 20px 32px 82px;
+    }
+
+    &__box {
+      @include mb(20px);
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .requisites {
+    &__content {
+      grid-template-columns: auto 160px;
+    }
+
+    &__table {
+      display: block;
+      padding: 23px 10px 25px 32px;
+    }
+
+    &__value {
+      max-width: 210px;
+      font-size: 14px;
+    }
+
+    &__row {
+      @include mb(12px);
+    }
+
+    &__box {
+      @include mb(12px);
+    }
+
+    &__title {
+      padding: 22px 116px 11px 31px;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    &__download-item {
+      align-items: flex-end;
+      padding: 128px 5px 10px;
+      font-size: 14px;
+
+      &::before {
+        top: 65px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .requisites {
+    &__download {
+      flex-direction: row;
+      background: 0;
+    }
+
+    &__download-item {
+      @include mr(15px);
+
+      align-items: center;
+      padding: 66px 5px 20px;
+
+      &::before {
+        top: 20px;
+        width: 26px;
+        height: 32px;
+        background-size: cover;
+      }
+    }
+
+    &__content {
+      display: block;
+      padding: 0;
+      background: 0;
+    }
+
+    &__table,
+    &__title {
+      display: none;
+    }
+  }
+}

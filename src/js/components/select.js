@@ -1,6 +1,6 @@
 import Choices from "choices.js";
 
-const selectNodes = document.querySelectorAll('.form__item select');
+const selectNodes = document.querySelectorAll('.custom-select');
 
 selectNodes.forEach(el => {
 	const choices = new Choices(el, {

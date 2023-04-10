@@ -137,3 +137,44 @@
     text-shadow: 0 4px 16px rgba(55, 87, 214, 60%);
   }
 }
+
+@mixin input-styles {
+  display: block;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 5%);
+  border-radius: 0;
+  padding: 11px 24px;
+  width: 100%;
+  font-size: 16px;
+  line-height: normal;
+  color: $text-color;
+  background-color: #fff;
+  transition: border-color $transition;
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+
+  @include hover {
+    border-color: rgba(0, 0, 0, 30%);
+
+    &:invalid {
+      border-color: #fd2020;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $accent-color;
+    }
+  }
+
+  /* stylelint-disable-next-line order/order */
+  &:invalid {
+    border-color: #fd2020;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $accent-color;
+  }
+}

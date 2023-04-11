@@ -23,8 +23,6 @@ function initMobileSlider(parent, wrapper, items, breakpoint = 940, options) {
   }
 }
 
-// initMobileSlider('.hero__benefits-wrapper', '.hero-benefits', '.hero-benefits__item', 570);
-
 // Hero
 const heroSwiper = new Swiper('.hero__slider', {
   spaceBetween: 40,
@@ -124,6 +122,30 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
     },
   },
 });
+
+// Gallery
+const gallerySwiper = new Swiper('.gallery__slider', {
+  slidesPerView: 'auto',
+  navigation: {
+    prevEl: '.gallery__nav .slider-nav__prev',
+    nextEl: '.gallery__nav .slider-nav__next',
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      spaceBetween: 15,
+    },
+    // when window width is >= 540
+    540: {
+      spaceBetween: 20,
+    },
+    // when window width is >= 940
+    940: {
+      spaceBetween: 30,
+    },
+  },
+});
+
 
 // Brands
 initMobileSlider('.brands__slider', '.brands__list', '.brands__item', 520);

@@ -1,6 +1,6 @@
 <section class="contacts">
-	<div class="container">
-		<div class="contacts__inner">
+	<div class="contacts__top">
+		<div class="container">
 			<div class="breadcrumbs">
 				<ul>
 					<li><a href="./">Главная/</a></li>
@@ -41,85 +41,91 @@
 						</p>
 				</li>
 			</ul>
-			<div class="contacts__map-wrapper contacts-map">
-				<div class="contacts-map__controls">
-					<label class="contacts-map__select-btn" for="map-select">
-						<div class="btn-outline">Выбрать город</div>
-					</label>
-					<div class="contacts-map__select select-v2">
-						<select id="map-select" class="custom-select">
-							<option value="Нижний Новгород">Нижний Новгород</option>
-							<option value="Москва">Москва</option>
-							<option value="Екатеринбург">Екатеринбург</option>
-						</select>
-					</div>
+		</div>
+	</div>
+	<div class="contacts__map-wrapper contacts-map">
+		<div class="container">
+			<div class="contacts-map__controls">
+				<label class="contacts-map__select-btn" for="map-select">
+					<div class="btn-outline btn-outline--sm-mobile">Выбрать город</div>
+				</label>
+				<div class="contacts-map__select select-v2">
+					<select id="map-select" class="custom-select">
+						<option value="Нижний Новгород">Нижний Новгород</option>
+						<option value="Москва">Москва</option>
+						<option value="Екатеринбург">Екатеринбург</option>
+					</select>
 				</div>
-				<div class="contacts-map__frame">
-					<div class="contacts-map__cards">
-						<div class="map-card">
-							<div class="map-card__inner">
-								<div class="map-card__title">Нижний Новгород</div>
-								<ul class="map-card__items">
-									<li class="map-card__item">
-										<div class="map-card__icon">
-											@include('../img/marker-small-icon.svg')
-										</div>
-										<a class="map-card__text" href="#">603137, г. Нижний Новгород,
-											Приокский район, ул. Вятская, д. 41</a>
-									</li>
-									<li class="map-card__item">
-										<div class="map-card__icon">
-											@include('../img/phone-icon.svg')
-										</div>
-										<a class="map-card__text" href="tel:+79535632543">+7 953 563-25-43</a>
-									</li>
-									<li class="map-card__item">
-										<div class="map-card__icon">
-											@include('../img/email-icon.svg')
-										</div>
-										<a class="map-card__text" href="mailto:optmebelit@yandex.ru">optmebelit@yandex.ru</a>
-									</li>
-									<li class="map-card__item">
-										<div class="map-card__icon">
-											@include('../img/watch-icon.svg')
-										</div>
-										<span class="map-card__text">Пн-Пт с 8.00–17.00</span>
-									</li>
-									<li class="map-card__item">
-										<div class="map-card__icon">
-											@include('../img/p-icon.svg')
-										</div>
-										<span class="map-card__text">Бесплатная парковка</span>
-									</li>
-								</ul>
-								<div class="map-card__footer">
-									<div class="map-card__caption">Проложить маршрут</div>
-									<div class="map-card__field-wrapper">
-										<div class="map-card__field-icon">
-											@include('../img/pin-icon.svg')
-										</div>
-										<div class="map-card__field">
-											<input type="text">
-											<button type="button">
-												@include('../img/arrow-2-icon.svg')
-											</button>
-										</div>
+			</div>
+			<div class="contacts-map__frame">
+				<div class="contacts-map__cards">
+					<div class="map-card">
+						<div class="map-card__inner">
+							<div class="map-card__title">Нижний Новгород</div>
+							<ul class="map-card__items">
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/marker-small-icon.svg')
 									</div>
-									<a class="map-card__btn btn-accent" href="#">Скачать схему проезда</a>
+									<a class="map-card__text" href="#">603137, г. Нижний Новгород,
+										Приокский район, ул. Вятская, д. 41</a>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/phone-icon.svg')
+									</div>
+									<a class="map-card__text" href="tel:+79535632543">+7 953 563-25-43</a>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/email-icon.svg')
+									</div>
+									<a class="map-card__text" href="mailto:optmebelit@yandex.ru">optmebelit@yandex.ru</a>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/watch-icon.svg')
+									</div>
+									<span class="map-card__text">Пн-Пт с 8.00–17.00</span>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/p-icon.svg')
+									</div>
+									<span class="map-card__text">Бесплатная парковка</span>
+								</li>
+							</ul>
+							<div class="map-card__footer">
+								<div class="map-card__caption">Проложить маршрут</div>
+								<div class="map-card__field-wrapper">
+									<div class="map-card__field-icon">
+										@include('../img/pin-icon.svg')
+									</div>
+									<div class="map-card__field">
+										<input type="text">
+										<button type="button">
+											@include('../img/arrow-2-icon.svg')
+										</button>
+									</div>
 								</div>
+								<a class="map-card__btn btn-accent" href="#">Скачать схему проезда</a>
 							</div>
 						</div>
 					</div>
-					<div class="contacts-map__el"><a
-							href="https://yandex.kz/maps/47/nizhny-novgorod/?utm_medium=mapframe&utm_source=maps"
-							style="color:#eee;font-size:12px;position:absolute;top:0px;">Нижний Новгород</a><a
-							href="https://yandex.kz/maps/47/nizhny-novgorod/house/vyatskaya_ulitsa_41/YEoYfwFmSUABQFtsfX5ydXhkZA==/?ll=43.966057%2C56.234470&utm_medium=mapframe&utm_source=maps&z=17.09"
-							style="color:#eee;font-size:12px;position:absolute;top:14px;">Вятская улица, 41 — Яндекс Карты</a><iframe
-							src="https://yandex.kz/map-widget/v1/?ll=43.966057%2C56.234470&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njk1ODYzNRJK0KDQvtGB0YHQuNGPLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCwg0JLRj9GC0YHQutCw0Y8g0YPQu9C40YbQsCwgNDEiCg0-3S9CFRnwYEI%2C&z=17.09"
-							width="1580" height="594" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-					</div>
+				</div>
+				<div class="contacts-map__el"><a
+						href="https://yandex.kz/maps/47/nizhny-novgorod/?utm_medium=mapframe&utm_source=maps"
+						style="color:#eee;font-size:12px;position:absolute;top:0px;">Нижний Новгород</a><a
+						href="https://yandex.kz/maps/47/nizhny-novgorod/house/vyatskaya_ulitsa_41/YEoYfwFmSUABQFtsfX5ydXhkZA==/?ll=43.966057%2C56.234470&utm_medium=mapframe&utm_source=maps&z=17.09"
+						style="color:#eee;font-size:12px;position:absolute;top:14px;">Вятская улица, 41 — Яндекс Карты</a><iframe
+						src="https://yandex.kz/map-widget/v1/?ll=43.966057%2C56.234470&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njk1ODYzNRJK0KDQvtGB0YHQuNGPLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCwg0JLRj9GC0YHQutCw0Y8g0YPQu9C40YbQsCwgNDEiCg0-3S9CFRnwYEI%2C&z=17.09"
+						width="1580" height="594" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="contacts__bottom">
+		<div class="container">
 			<div class="contacts__row">
 				<div class="contacts__col">
 					<div class="contacts__col-head btn-accent">Обратный звонок</div>
@@ -158,10 +164,10 @@
 				<div class="contacts__col">
 					<div class="contacts__col-head btn-accent">Задать вопрос в чате</div>
 					<ul class="contacts__socials">
-						<li><a href="#">@include('../img/viber-icon.svg')</a></li>
-						<li><a href="#">@include('../img/whatsapp-icon.svg')</a></li>
-						<li><a href="#">@include('../img/telegram-icon.svg')</a></li>
-						<li>Мессенджеры</li>
+						<li class="contacts__socials-icon"><a href="#">@include('../img/viber-icon.svg')</a></li>
+						<li class="contacts__socials-icon"><a href="#">@include('../img/whatsapp-icon.svg')</a></li>
+						<li class="contacts__socials-icon"><a href="#">@include('../img/telegram-icon.svg')</a></li>
+						<li class="contacts__socials-caption">Мессенджеры</li>
 					</ul>
 				</div>
 			</div>

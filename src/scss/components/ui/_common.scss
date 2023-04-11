@@ -129,6 +129,12 @@
     &.swiper-button-disabled {
       opacity: 0.1;
     }
+
+    &.swiper-button-lock {
+      opacity: 0;
+      visibility: hidden;
+      touch-action: none;
+    }
   }
 }
 
@@ -153,6 +159,10 @@
 }
 
 @media screen and (max-width: 1200px) {
+  :root {
+    --content-width: 930px;
+  }
+
   .breadcrumbs {
     padding: 15px 0 27px;
   }
@@ -169,14 +179,13 @@
     font-size: 32px;
     line-height: 1.4;
   }
-
-  .container {
-    --content-width: 930px;
-    --container-width: calc(var(--content-width) + var(--container-offset) * 2);
-  }
 }
 
 @media screen and (max-width: 940px) {
+  :root {
+    --content-width: 610px;
+  }
+
   .breadcrumbs {
     padding: 10px 0 23px;
     font-size: 8px;
@@ -192,11 +201,6 @@
 
   .title {
     font-size: 24px;
-  }
-
-  .container {
-    --content-width: 610px;
-    --container-width: calc(var(--content-width) + var(--container-offset) * 2);
   }
 
   .check-list {

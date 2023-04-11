@@ -109,7 +109,7 @@
 
   &.is-open {
     &::before {
-      transform: rotate(180deg) translateY(calc(-50% + 10px));
+      transform: rotate(180deg) translateY(calc(-50% + 14px));
     }
   }
 }

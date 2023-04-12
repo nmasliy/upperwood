@@ -1,0 +1,272 @@
+.terms {
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    margin-bottom: 64px;
+  }
+
+  &__info {
+    max-width: 630px;
+  }
+
+  &__info-title {
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+      max-height: 430px;
+      object-position: top;
+    }
+
+    picture {
+      display: flex;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &--1 {
+      grid-template-columns: 63fr 89fr;
+      gap: 0 60px;
+
+      .terms__img img {
+        max-height: 514px;
+      }
+    }
+
+    &--2 {
+      grid-template-columns: 55fr 88fr;
+    }
+
+    &--3 {
+      align-items: center;
+      grid-template-columns: 62fr 75fr;
+    }
+
+    &--4 {
+      grid-template-columns: 74fr 80fr;
+
+      .terms {
+        &__info {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &__benefits {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__benefits-item {
+    @include mr(32px);
+
+    display: flex;
+    align-items: center;
+    padding: 32px;
+    max-width: 515px;
+    box-shadow: 2px 0 4px rgba(55, 87, 214, 24%), 0 4px 8px rgba(55, 87, 214, 16%);
+    background: #ecedf4;
+  }
+
+  &__benefits-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 88px;
+  }
+
+  &__benefits-text {
+    margin: 0 auto;
+    max-width: 276px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .terms {
+    &__subtitle {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 770px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__benefits-item {
+      flex-grow: 1;
+    }
+
+    &__info-title {
+      margin-bottom: 16px;
+
+      &--thin {
+        font-weight: 400;
+      }
+    }
+
+    &__content {
+      grid-template-columns: 1.05fr 1fr;
+      padding-bottom: 64px;
+      gap: 0 30px;
+
+      &--1 {
+        gap: 0 5px;
+      }
+
+      &--4 {
+        display: block;
+
+        .terms {
+          &__col {
+            @include mb(32px);
+
+            max-width: 822px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .terms {
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__info-title {
+      font-size: 16px;
+
+      &--thin {
+        font-size: 14px;
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 32px;
+      max-width: 450px;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__content {
+      display: block;
+      padding-bottom: 48px;
+
+      &--2 {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+
+        .terms__img {
+          display: block;
+
+          img {
+            height: 290px;
+            object-position: right;
+          }
+        }
+      }
+
+      &--4 {
+        .terms {
+          &__col {
+            max-width: 450px;
+          }
+        }
+      }
+    }
+
+    &__benefits-icon {
+      width: 64px;
+      height: 64px;
+
+      svg {
+        width: 35px;
+      }
+    }
+
+    &__benefits-item {
+      padding: 6px;
+
+      &:nth-child(2) svg {
+        width: 32px;
+      }
+    }
+
+    &__benefits-text {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .terms {
+    &__subtitle {
+      margin-bottom: 24px;
+      max-width: 290px;
+    }
+
+    &__info-title {
+      display: none;
+
+      &--thin {
+        display: block;
+      }
+    }
+
+    &__benefits {
+      display: block;
+    }
+
+    &__benefits-text {
+      max-width: 220px;
+    }
+
+    &__benefits-item {
+      @include mb(16px);
+      @include mr(0);
+    }
+
+    &__content {
+      padding-bottom: 32px;
+
+      &--2 {
+        display: block;
+
+        .terms__img {
+          display: none;
+        }
+      }
+
+      &--4 {
+        .terms {
+          &__col {
+            @include mb(24px);
+          }
+        }
+      }
+    }
+  }
+}

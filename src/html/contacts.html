@@ -49,17 +49,18 @@
 				<label class="contacts-map__select-btn" for="map-select">
 					<div class="btn-outline btn-outline--sm-mobile">Выбрать город</div>
 				</label>
-				<div class="contacts-map__select select-v2">
-					<select id="map-select" class="custom-select">
-						<option value="Нижний Новгород">Нижний Новгород</option>
-						<option value="Москва">Москва</option>
-						<option value="Екатеринбург">Екатеринбург</option>
-					</select>
+				<div class="contacts-map__select accordion-select">
+					<div class="accordion-select__current" data-value="Нижний Новгород">Нижний Новгород</div>
+					<ul class="accordion-select__list">
+						<li class="accordion-select__item" data-tab="1" data-value="Нижний Новгород">Нижний Новгород</li>
+						<li class="accordion-select__item" data-tab="2" data-value="Москва">Москва</li>
+						<li class="accordion-select__item" data-tab="3" data-value="Екатеринбург">Екатеринбург</li>
+					</ul>
 				</div>
 			</div>
 			<div class="contacts-map__frame">
 				<div class="contacts-map__cards">
-					<div class="map-card">
+					<div class="map-card is-active" data-tab="1">
 						<div class="map-card__inner">
 							<div class="map-card__title">Нижний Новгород</div>
 							<ul class="map-card__items">
@@ -68,6 +69,112 @@
 										@include('../img/marker-small-icon.svg')
 									</div>
 									<a class="map-card__text" href="#">603137, г. Нижний Новгород,
+										Приокский район, ул. Вятская, д. 41</a>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/phone-icon.svg')
+									</div>
+									<a class="map-card__text" href="tel:+79535632543">+7 953 563-25-43</a>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/email-icon.svg')
+									</div>
+									<a class="map-card__text" href="mailto:optmebelit@yandex.ru">optmebelit@yandex.ru</a>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/watch-icon.svg')
+									</div>
+									<span class="map-card__text">Пн-Пт с 8.00–17.00</span>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/p-icon.svg')
+									</div>
+									<span class="map-card__text">Бесплатная парковка</span>
+								</li>
+							</ul>
+							<div class="map-card__footer">
+								<div class="map-card__caption">Проложить маршрут</div>
+								<div class="map-card__field-wrapper">
+									<div class="map-card__field-icon">
+										@include('../img/pin-icon.svg')
+									</div>
+									<div class="map-card__field">
+										<input type="text">
+										<button type="button">
+											@include('../img/arrow-2-icon.svg')
+										</button>
+									</div>
+								</div>
+								<a class="map-card__btn btn-accent" href="#">Скачать схему проезда</a>
+							</div>
+						</div>
+					</div>
+					<div class="map-card" data-tab="2">
+						<div class="map-card__inner">
+							<div class="map-card__title">Москва</div>
+							<ul class="map-card__items">
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/marker-small-icon.svg')
+									</div>
+									<a class="map-card__text" href="#">603137, г. Москва,
+										Приокский район, ул. Вятская, д. 41</a>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/phone-icon.svg')
+									</div>
+									<a class="map-card__text" href="tel:+79535632543">+7 953 563-25-43</a>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/email-icon.svg')
+									</div>
+									<a class="map-card__text" href="mailto:optmebelit@yandex.ru">optmebelit@yandex.ru</a>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/watch-icon.svg')
+									</div>
+									<span class="map-card__text">Пн-Пт с 8.00–17.00</span>
+								</li>
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/p-icon.svg')
+									</div>
+									<span class="map-card__text">Бесплатная парковка</span>
+								</li>
+							</ul>
+							<div class="map-card__footer">
+								<div class="map-card__caption">Проложить маршрут</div>
+								<div class="map-card__field-wrapper">
+									<div class="map-card__field-icon">
+										@include('../img/pin-icon.svg')
+									</div>
+									<div class="map-card__field">
+										<input type="text">
+										<button type="button">
+											@include('../img/arrow-2-icon.svg')
+										</button>
+									</div>
+								</div>
+								<a class="map-card__btn btn-accent" href="#">Скачать схему проезда</a>
+							</div>
+						</div>
+					</div>
+					<div class="map-card" data-tab="3">
+						<div class="map-card__inner">
+							<div class="map-card__title">Екатеринбург</div>
+							<ul class="map-card__items">
+								<li class="map-card__item">
+									<div class="map-card__icon">
+										@include('../img/marker-small-icon.svg')
+									</div>
+									<a class="map-card__text" href="#">603137, г. Екатеринбург,
 										Приокский район, ул. Вятская, д. 41</a>
 								</li>
 								<li class="map-card__item">

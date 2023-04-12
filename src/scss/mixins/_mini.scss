@@ -183,3 +183,13 @@
     font-size: 12px;
   }
 }
+
+@mixin hide-scroll {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
+  scrollbar-color: transparent transparent;
+  scrollbar-width: none;
+}

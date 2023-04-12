@@ -1,7 +1,6 @@
 .benefits {
   &__content {
     display: flex;
-    padding-left: max(15px, calc((100% - var(--container-width)) / 2));
   }
 
   &__title {
@@ -106,6 +105,10 @@
       padding: 16px 2px;
       box-shadow: 2px 0 4px rgba(55, 87, 214, 24%), 0 4px 8px rgba(55, 87, 214, 16%);
       background: #fff;
+    }
+
+    &__slider {
+      overflow: visible;
     }
 
     &__item {

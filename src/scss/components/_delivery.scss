@@ -325,6 +325,8 @@
     }
 
     &__addresses {
+      @include hide-scroll;
+
       display: flex;
       overflow: auto;
       margin-right: -15px;

@@ -1,6 +1,12 @@
 .brands {
+  padding-top: 0;
+
   &__title {
     margin-bottom: 32px;
+  }
+
+  &__title-sm {
+    margin-bottom: 64px;
   }
 
   &__subtitle {
@@ -74,6 +80,11 @@
       margin-bottom: 8px;
     }
 
+    &__title-sm {
+      margin: 0 auto 32px;
+      max-width: 450px;
+    }
+
     &__subtitle {
       margin: 0 auto 32px;
       max-width: 300px;
@@ -97,6 +108,11 @@
   .brands {
     &__list {
       display: block;
+    }
+
+    &__title-sm {
+      margin-bottom: 24px;
+      max-width: 290px;
     }
 
     &__subtitle {

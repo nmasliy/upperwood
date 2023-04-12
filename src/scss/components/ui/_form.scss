@@ -13,6 +13,16 @@
     }
   }
 
+  &__tripple {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    .form__item {
+      @include mb(0);
+    }
+  }
+
   &__item {
     @include mb(24px);
 
@@ -157,6 +167,20 @@
       textarea {
         padding: 7px 24px 8px;
         font-size: 12px;
+      }
+    }
+
+    &__tripple {
+      display: block;
+
+      .form {
+        &__item {
+          @include mb(12px);
+
+          &:last-child {
+            margin-top: 24px;
+          }
+        }
       }
     }
 

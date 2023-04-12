@@ -1,0 +1,73 @@
+.accordion-select {
+  position: relative;
+  min-height: 48px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+
+  &__current {
+    position: relative;
+    border: 1px solid rgba(49, 56, 150, 10%);
+    padding: 10px 40px 10px 16px;
+    background: #fff;
+    transition: color $transition, border-color $transition, text-shadow $transition;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      width: 12px;
+      height: 8px;
+      background: url("../img/chevron-down-icon.svg") center no-repeat;
+      transform: translateY(-50%);
+      transition: transform $transition;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    left: 0;
+    top: calc(100% - 1px);
+    z-index: 4;
+    display: none;
+    border-top: 2px solid $primary-color;
+    width: 100%;
+  }
+
+  &__item {
+    @include text-shadow-hover;
+
+    border: 1px solid rgba(49, 56, 150, 10%);
+    padding: 10px 40px 10px 16px;
+    background: #fff;
+  }
+
+  &.is-active {
+    .accordion-select {
+      &__current {
+        color: $primary-color;
+
+        &::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      &__list {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .accordion-select {
+    min-height: 36px;
+    font-size: 14px;
+
+    &__item,
+    &__current {
+      padding: 5px 40px 5px 16px;
+    }
+  }
+}

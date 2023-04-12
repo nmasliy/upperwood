@@ -43,6 +43,24 @@ textarea {
   font: inherit;
 }
 
+::-webkit-scrollbar-track {
+  background-color: rgba(33, 33, 33, 10%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba($primary-color, 0.8);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+* {
+  scrollbar-color: rgba($primary-color, 0.8) rgba(33, 33, 33, 10%);
+  scrollbar-width: thin;
+}
+
 @media screen and (max-width: 1200px) {
   body {
     font-size: 16px;
@@ -50,6 +68,11 @@ textarea {
 }
 
 @media screen and (max-width: 940px) {
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 3px;
+  }
+
   body {
     font-size: 14px;
   }

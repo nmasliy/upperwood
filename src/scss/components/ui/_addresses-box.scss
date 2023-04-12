@@ -72,6 +72,8 @@
 
 @media screen and (max-width: 520px) {
   .addresses-box {
+    @include hide-scroll;
+
     display: flex;
     overflow: auto;
     margin-right: -15px;

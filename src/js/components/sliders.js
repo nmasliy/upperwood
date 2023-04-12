@@ -11,6 +11,9 @@ function initMobileSlider(parent, wrapper, items, breakpoint = 940, options) {
 
   if (window.innerWidth <= breakpoint) {
     const $parent = document.querySelector(parent);
+
+    if (!$parent) return;
+    
     const $wrapper = $parent.querySelector(wrapper);
     const $items = $wrapper.querySelectorAll(items);
 
@@ -60,7 +63,7 @@ const popularSwiper = new Swiper('.popular__slider', {
 // Product
 const productSliders = document.querySelectorAll('.product__images');
 
-productSliders.forEach((el) => {
+productSliders?.forEach((el) => {
   const productSwiper = new Swiper(el, {
     pagination: {
       el: '.swiper-pagination',
@@ -71,7 +74,7 @@ productSliders.forEach((el) => {
   if (window.innerWidth > 940) {
     const ghosts = el.querySelectorAll('.product__images-ghost li');
 
-    ghosts.forEach((el, i) =>
+    ghosts?.forEach((el, i) =>
       el.addEventListener('mouseover', () => productSwiper.slideTo(i))
     );
   }

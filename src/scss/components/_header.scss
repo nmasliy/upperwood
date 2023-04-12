@@ -269,20 +269,23 @@
 
       display: flex;
       align-items: center;
-      border-bottom: 2px solid transparent;
       padding: 8px 16px;
       min-height: 48px;
       transition: color $transition, border-color $transition, text-shadow $transition;
-
-      &:focus,
-      &:active {
-        border-color: $primary-color;
-      }
     }
 
     > ul {
       > li {
         @include mr(9px);
+
+        > a {
+          border-bottom: 2px solid transparent;
+
+          &:focus,
+          &:active {
+            border-color: $primary-color;
+          }
+        }
       }
     }
   }
@@ -292,6 +295,14 @@
 
     > ul {
       @include submenu;
+
+      > li > a {
+        &:focus,
+        &:active {
+          text-shadow: none;
+          color: $primary-color;
+        }
+      }
     }
 
     > a {

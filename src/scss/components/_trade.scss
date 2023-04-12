@@ -1,0 +1,72 @@
+.trade {
+  min-height: 750px;
+
+  &__title {
+    margin-bottom: 64px;
+  }
+
+  &__content {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 68fr 87fr;
+    gap: 24px;
+  }
+
+  &__info {
+    p {
+      @include mb(16px);
+    }
+  }
+
+  &__img {
+    picture {
+      display: flex;
+    }
+
+    img {
+      height: 414px;
+      object-position: top;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .trade {
+    &__content {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    &__img {
+      img {
+        height: 257px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .trade {
+    &__title {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .trade {
+    min-height: auto;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__content {
+      display: block;
+    }
+
+    &__img {
+      display: none;
+    }
+  }
+}

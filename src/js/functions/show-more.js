@@ -9,7 +9,19 @@ export function initShowMore(triggerSelector, parentSelector) {
 			
       const parentNode = el.closest(parentSelector);
 
-      parentNode.classList.add('is-active');
+      toggleText(parentNode);
+      parentNode.classList.toggle('is-expanded');
     });
+
+    function toggleText(parentNode) {
+      const showText = el.dataset.show;
+      const hideText = el.dataset.hide;
+
+      if (parentNode.classList.contains('is-expanded')) {
+        el.textContent = showText;
+      } else {
+        el.textContent = hideText;
+      }
+    }
   });
 }

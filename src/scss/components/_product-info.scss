@@ -1,0 +1,295 @@
+.product-info {
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  &__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 8px 0 11px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 24px;
+    }
+  }
+
+  &__rating-caption {
+    font-size: 18px;
+    line-height: normal;
+    color: rgba(33, 33, 33, 50%);
+
+    b {
+      display: none;
+      font-weight: 700;
+      color: $text-color;
+    }
+  }
+
+  &__desc-mobile {
+    display: none;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__price-value {
+    margin-right: 24px;
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  &__price-caption {
+    font-weight: 700;
+    font-size: 16px;
+    color: $primary-color;
+  }
+
+  &__caption-tablet {
+    display: none;
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 14px;
+    gap: 16px;
+  }
+
+  &__chars-title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &__table {
+    margin: 0 -16px;
+    border-collapse: separate;
+    border-spacing: 16px 0;
+    width: 100%;
+    font-size: 16px;
+
+    th,
+    td {
+      vertical-align: top;
+      width: 50%;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    th {
+      border-bottom: 1px solid rgba(49, 56, 150, 10%);
+      color: rgba(33, 33, 33, 50%);
+    }
+
+    td {
+      padding-bottom: 16px;
+    }
+  }
+
+  &__btn-all {
+    display: inline-block;
+    border: none;
+    border-bottom: 2px solid $primary-color;
+    padding: 9px 16px 9px 0;
+    font-weight: 600;
+    font-size: 18px;
+    background: #fff;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__title,
+  &__line {
+    &-mobile {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .product-info {
+    &__buttons {
+      display: block;
+      margin-bottom: 0;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__btn {
+      @include mb(16px);
+
+      width: 100%;
+    }
+
+    &__line {
+      margin-bottom: 32px;
+      padding: 16px 0 0;
+    }
+
+    &__price {
+      justify-content: space-between;
+    }
+
+    &__price-caption {
+      font-size: 16px;
+    }
+
+    &__price-value {
+      font-size: 24px;
+    }
+
+    &__chars,
+    &__btn-all {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .product-info {
+    display: flex;
+    flex-direction: column;
+
+    &__btn {
+      font-size: 14px;
+    }
+
+    &__caption {
+      display: none;
+    }
+
+    &__price {
+      line-height: normal;
+    }
+
+    &__caption-tablet {
+      display: block;
+      margin-bottom: 16px;
+      color: rgba(33, 33, 33, 70%);
+    }
+
+    &__rating {
+      ul {
+        margin-right: 8px;
+      }
+    }
+
+    &__rating-caption {
+      b {
+        display: inline;
+      }
+    }
+
+    &__line {
+      order: -1;
+      margin-bottom: 8px;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__form {
+      margin-bottom: 32px;
+      max-width: 289px;
+    }
+
+    &__title,
+    &__line {
+      max-width: 450px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .product-info {
+    &__title {
+      display: none;
+      font-weight: 400;
+      font-size: 16px;
+
+      &-mobile {
+        display: block;
+      }
+    }
+
+    &__rating {
+      &-caption {
+        font-size: 12px;
+      }
+
+      li {
+        width: 16px;
+        height: 16px;
+      }
+
+      ul {
+        margin-right: 6px;
+      }
+
+      img {
+        width: 12px;
+      }
+    }
+
+    &__price-value {
+      font-size: 16px;
+    }
+
+    &__price-caption {
+      font-size: 10px;
+    }
+
+    &__btn {
+      @include mb(8px);
+    }
+
+    &__desc-mobile {
+      display: block;
+      padding-top: 16px;
+      font-size: 12px;
+
+      p {
+        @include mb(16px);
+      }
+    }
+
+    &__caption {
+      display: block;
+      font-size: 12px;
+      color: rgba(33, 33, 33, 70%);
+    }
+
+    &__line {
+      display: none;
+      margin-bottom: 16px;
+
+      &-mobile {
+        display: flex;
+      }
+    }
+  }
+}

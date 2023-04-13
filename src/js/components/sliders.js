@@ -1,5 +1,5 @@
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
-Swiper.use([Navigation, Pagination, Autoplay]);
+import Swiper, { Navigation, Pagination, Autoplay, Thumbs } from 'swiper';
+Swiper.use([Navigation, Pagination, Autoplay, Thumbs]);
 
 function initMobileSlider(parent, wrapper, items, breakpoint = 940, options) {
   if (!options) {
@@ -53,8 +53,8 @@ const popularSwiper = new Swiper('.popular__slider', {
     320: {
       spaceBetween: 15,
     },
-    // when window width is >= 940
-    940: {
+    // when window width is >= 941
+    941: {
       spaceBetween: 30,
     },
   },
@@ -93,8 +93,8 @@ const benefitsSwiper = new Swiper('.benefits__slider', {
     320: {
       spaceBetween: 10,
     },
-    // when window width is >= 520
-    520: {
+    // when window width is >= 521
+    521: {
       spaceBetween: 20,
     },
   },
@@ -114,13 +114,13 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
       spaceBetween: 15,
       slidesPerView: 'auto',
     },
-    // when window width is >= 520
-    520: {
+    // when window width is >= 521
+    521: {
       spaceBetween: 20,
       slidesPerView: 3,
     },
-    // when window width is >= 940
-    940: {
+    // when window width is >= 941
+    941: {
       spaceBetween: 28,
     },
   },
@@ -138,14 +138,50 @@ const gallerySwiper = new Swiper('.gallery__slider', {
     320: {
       spaceBetween: 15,
     },
-    // when window width is >= 540
-    540: {
+    // when window width is >= 521
+    521: {
       spaceBetween: 20,
     },
-    // when window width is >= 940
-    940: {
+    // when window width is >= 941
+    941: {
       spaceBetween: 30,
     },
+  },
+});
+
+
+// Product Card Thumbs
+const cardThumbsSlider = new Swiper('.product-card__slider-thumbs', {
+  spaceBetween: 11,
+  navigation: {
+    prevEl: '.product-card__nav-prev',
+    nextEl: '.product-card__nav-next',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 3,
+    },
+    // when window width is >= 1201
+    1201: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+// Product Card Main
+const cardMainSlider = new Swiper('.product-card__slider-main', {
+  pagination: {
+    el: '.product-card__slider .swiper-pagination',
+    clickable: true,
+  },
+  spaceBetween: 30,
+  thumbs: {
+    swiper: cardThumbsSlider
   },
 });
 

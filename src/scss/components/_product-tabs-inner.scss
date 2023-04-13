@@ -1,0 +1,48 @@
+.product-desc {
+  p {
+    @include mb(16px);
+  }
+}
+
+.product-reviews {
+  &__item {
+    margin-top: 32px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:nth-child(2) ~ .product-reviews__item {
+      display: none;
+    }
+  }
+
+  &__list {
+    margin-bottom: 32px;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  &.is-expanded {
+    .product-reviews__item:nth-child(2) ~ .product-reviews__item {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .product-reviews {
+    &__list {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .product-desc {
+    font-size: 12px;
+  }
+}

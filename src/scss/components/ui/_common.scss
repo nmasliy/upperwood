@@ -95,11 +95,18 @@
 }
 
 .breadcrumbs {
+  @include hide-scroll;
+
+  overflow: auto;
   padding: 15px 0 44px;
   font-size: 14px;
 
+  ul {
+    display: flex;
+  }
+
   li {
-    display: inline;
+    flex-shrink: 0;
     text-decoration: underline;
     color: $primary-color;
 
@@ -107,6 +114,32 @@
       text-decoration: none;
       color: rgba(33, 33, 33, 50%);
     }
+  }
+}
+
+.tags {
+  font-size: 14px;
+
+  ul {
+    display: flex;
+    margin: -4px;
+  }
+
+  li {
+    margin: 4px;
+    border: 1px solid rgba(33, 33, 33, 50%);
+    text-align: center;
+    background: #fff;
+
+    &.is-active {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 4px 8px;
   }
 }
 
@@ -240,6 +273,10 @@
 @media screen and (max-width: 940px) {
   :root {
     --content-width: 610px;
+  }
+
+  .tags {
+    font-size: 10px;
   }
 
   .breadcrumbs {

@@ -1,7 +1,4 @@
 .hero {
-  &__inner {
-  }
-
   &__slider {
     position: relative;
   }
@@ -41,9 +38,6 @@
     line-height: 1.4;
     text-align: center;
     color: #fff;
-  }
-
-  &__btn {
   }
 
   &__slider-prev {

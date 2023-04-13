@@ -5,5 +5,6 @@ import './components/tabs';
 import './components/mask';
 import './components/modals';
 import './components/form';
+import './components/show-more';
 import './components/sliders';
 import './components/accordion-select';

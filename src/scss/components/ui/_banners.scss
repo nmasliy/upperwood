@@ -1,0 +1,11 @@
+.banners {
+  &__item {
+    @include mb(32px);
+
+    img {
+      display: flex;
+      width: 100%;
+      height: 322px;
+    }
+  }
+}

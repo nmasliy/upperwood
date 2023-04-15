@@ -1,0 +1,30 @@
+<section class="catalog">
+	<div class="container">
+		<div class="catalog__inner">
+			<div class="breadcrumbs">
+				<ul>
+					<li><a href="./">Главная/</a></li>
+					<li><a href="#">Каталог товаров</a></li>
+					<li><a href="#">Мебель в ванную</a></li>
+				</ul>
+			</div>
+			<h1 class="catalog__title title">Мебель в ванную</h1>
+			<div class="tags">
+				<ul>
+					<li class="is-active"><button>Тумбы под раковину</button></li>
+					<li><button>Тумбы с раковинами</button></li>
+					<li><button>Тумбы под стиральную машину</button></li>
+					<li><button>Шкафы-пеналы</button></li>
+					<li><button>Комплект тумба со столешницей и раковиной</button></li>
+				</ul>
+			</div>
+			<div class="catalog__wrapper">
+				<div class="catalog__content">
+					@include('catalog-head.html')
+					@include('products/product-list-catalog.html')
+					@include('catalog-footer.html')
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

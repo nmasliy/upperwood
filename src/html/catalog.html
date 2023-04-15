@@ -1,0 +1,28 @@
+<section class="catalog">
+	<div class="container">
+		<div class="catalog__inner">
+			<div class="breadcrumbs">
+				<ul>
+					<li><a href="./">Главная/</a></li>
+					<li><a href="#">Каталог товаров</a></li>
+				</ul>
+			</div>
+			<h1 class="catalog__title title">Каталог товаров</h1>
+			<div class="tags">
+				<ul>
+					<li class="is-active"><button>Мебель в ванную</button></li>
+					<li><button>Зеркала</button></li>
+					<li><button>Раковины</button></li>
+					<li><button>Кухонные мойки</button></li>
+				</ul>
+			</div>
+			<div class="catalog__wrapper">
+				<div class="catalog__content">
+					@include('catalog-head.html')
+					@include('products/product-list-catalog.html')
+					@include('catalog-footer.html')
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -17,6 +17,8 @@ export function initShowMore(triggerSelector, parentSelector) {
       const showText = el.dataset.show;
       const hideText = el.dataset.hide;
 
+      if (!showText) return;
+
       if (parentNode.classList.contains('is-expanded')) {
         el.textContent = showText;
       } else {

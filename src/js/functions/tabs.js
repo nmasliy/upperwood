@@ -1,4 +1,4 @@
-export function initTabs(triggerSelector, parentSelector) {
+export function initTabs(triggerSelector, parentSelector, onChange) {
   const triggerNodes = document.querySelectorAll(triggerSelector);
   const parentNodes = document.querySelectorAll(parentSelector);
 
@@ -37,6 +37,8 @@ export function initTabs(triggerSelector, parentSelector) {
         );
 
         newActiveParent.classList.add('is-active');
+
+        if (onChange) onChange(e.target);
       });
     });
   }

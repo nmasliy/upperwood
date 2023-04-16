@@ -86,18 +86,9 @@
     color: $text-color;
   }
 
-  // &::-webkit-scrollbar {
-  //   width: 3px;
-  //   height: 3px;
-  // }
-
   &.is-open {
     &::before {
       transform: rotate(180deg) translateY(calc(-50% + 14px));
     }
   }
-}
-
-@media screen and (max-width: 940px) {
-
 }

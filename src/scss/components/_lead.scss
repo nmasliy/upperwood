@@ -1,6 +1,10 @@
 .lead {
   color: #fff;
 
+  &-small--2 {
+    padding: 0 0 96px;
+  }
+
   &__wrapper {
     padding: 64px 0;
     background: $primary-gradient;

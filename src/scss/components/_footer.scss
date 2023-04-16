@@ -172,11 +172,19 @@
     }
 
     &__links {
-      justify-content: space-between;
-      width: 60%;
+      width: 65.5%;
 
       li {
         @include mr(15px);
+
+        flex-grow: 0.43;
+
+        &:last-child {
+          flex-grow: 1;
+          margin-left: auto;
+          width: 100%;
+          max-width: 53.5%;
+        }
       }
     }
 
@@ -234,6 +242,13 @@
 
       li {
         @include mr(0);
+
+        &:last-child {
+          flex-grow: 0;
+          margin-left: 0;
+          width: auto;
+          max-width: 100%;
+        }
       }
 
       a {

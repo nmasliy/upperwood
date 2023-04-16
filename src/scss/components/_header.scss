@@ -205,6 +205,12 @@
     ul {
       margin: -12px 0;
     }
+
+    &.native-scroll {
+      overflow: auto;
+      margin-right: 24px;
+      padding-right: 35px;
+    }
   }
 
   &__search-hints {

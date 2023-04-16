@@ -117,6 +117,24 @@
         background: #fff;
       }
     }
+
+    &.native-scroll {
+      .choices .choices__list--dropdown .choices__list,
+      .product-form__select .choices .choices__list[aria-expanded] .choices__list {
+        margin: 10px 20px 10px 0;
+      }
+
+      .product-form__select .choices .choices__list--dropdown .choices__item--selectable,
+      .choices .choices__list[aria-expanded] .choices__item--selectable {
+        &:last-child {
+          margin-bottom: -10px;
+        }
+
+        &:nth-child(2) {
+          margin-top: -10px;
+        }
+      }
+    }
   }
 }
 

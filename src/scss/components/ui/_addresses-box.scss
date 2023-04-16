@@ -14,6 +14,7 @@
     text-align: center;
     background: rgba(#fff, 0.8);
     transition: box-shadow $transition;
+    cursor: pointer;
 
     @include hover {
       box-shadow: 2px 0 4px rgba(55, 87, 214, 24%), 0 4px 8px rgba(55, 87, 214, 16%);

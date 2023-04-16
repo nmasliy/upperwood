@@ -3,7 +3,20 @@ import { initTabs } from '../functions/tabs';
 initTabs('.delivery__tabs li', '.delivery__tab-content');
 initTabs('.map__icon', '.map__info');
 initTabs('.accordion-select__item', '.map-card');
+initTabs('.addresses-box__item', '.map-card', updateAddress);
 initTabs('.product-tabs li', '.product-tabs__content-item');
+
+// Addresses
+const select = document.querySelector('.accordion-select');
+const selectCurrent = select?.querySelector('.accordion-select__current');
+
+function updateAddress(target) {
+	const box = target.closest('.addresses-box__item');
+
+	selectCurrent.textContent = box.dataset.value;
+	selectCurrent.dataset.value = box.dataset.value;
+}
+
 
 // Product
 // Клик по кнопке "Все характеристики"

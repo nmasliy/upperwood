@@ -14,6 +14,16 @@ if (filter) {
 
 	overlay.addEventListener('click', closeFilter);
 
+	window.addEventListener('resize', () => {
+		if (window.innerWidth > 940) {
+			overlay.classList.remove('is-active');
+			html.classList.remove('disable-scroll');
+		} else if (filter.classList.contains('is-active')) {
+			overlay.classList.add('is-active');
+			html.classList.add('disable-scroll');
+		}
+	})
+
 	function openFilter() {
 		if (window.innerWidth <= 940) {
 			overlay.style.display = 'block';

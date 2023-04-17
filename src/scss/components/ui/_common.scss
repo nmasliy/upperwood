@@ -148,12 +148,16 @@
 }
 
 .tags {
+  margin: -4px;
   font-size: 14px;
 
-  ul {
+  &__row {
     display: flex;
     flex-wrap: wrap;
-    margin: -4px;
+  }
+
+  &__row--2 {
+    display: none;
   }
 
   li {
@@ -315,13 +319,17 @@
   }
 
   .tags {
+    @include hide-scroll;
+
+    overflow: auto;
     font-size: 10px;
 
-    ul {
-      @include hide-scroll;
-
+    &__row {
       flex-wrap: nowrap;
-      overflow: auto;
+
+      &--2 {
+        display: flex;
+      }
     }
   }
 
@@ -400,8 +408,14 @@
   .tags {
     margin-right: -15px;
 
-    ul {
-      padding-right: 15px;
+    &__row {
+      &::after {
+        content: "";
+        display: block;
+        flex-shrink: 0;
+        margin: -4px;
+        width: 15px;
+      }
     }
   }
 

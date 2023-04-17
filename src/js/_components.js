@@ -11,4 +11,5 @@ import './components/sliders';
 import './components/filter-slider';
 import './components/move-filter';
 import './components/filter';
+import './components/tags-wrap';
 import './components/accordion-select';

@@ -136,14 +136,21 @@ const gallerySwiper = new Swiper('.gallery__slider', {
   breakpoints: {
     // when window width is >= 320px
     320: {
+      slidesPerView: 'auto',
       spaceBetween: 15,
     },
     // when window width is >= 521
     521: {
+      slidesPerView: 'auto',
       spaceBetween: 20,
     },
     // when window width is >= 941
     941: {
+      spaceBetween: 30,
+      slidesPerView: 3,
+    },
+    1201: {
+      slidesPerView: 'auto',
       spaceBetween: 30,
     },
   },

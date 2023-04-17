@@ -58,17 +58,11 @@
 
     a {
       display: block;
-      border-bottom: 2px solid transparent;
       padding: 8px 16px;
       min-height: 48px;
       font-weight: 600;
       text-shadow: 0 4px 16px transparent;
       transition: $transition;
-
-      &:focus,
-      &:active {
-        border-color: $primary-color;
-      }
 
       @include hover {
         text-shadow: 0 4px 16px rgba(55, 87, 214, 60%);
@@ -99,6 +93,7 @@
 
     > a {
       position: relative;
+      border-bottom: 2px solid transparent;
       padding-right: 40px;
       transition: color $transition, border-color $transition, text-shadow $transition;
 
@@ -112,12 +107,23 @@
         background: url("../img/chevron-down-icon.svg") center no-repeat;
         transform: translateY(-50%) rotate(-90deg);
       }
+
+      &:focus,
+      &:active {
+        border-color: $primary-color;
+      }
     }
 
     li > a {
       padding: 10px 16px;
       font-weight: 400;
       font-size: 16px;
+
+      &:focus,
+      &:active {
+        text-shadow: 0 4px 16px transparent;
+        color: $primary-color;
+      }
     }
 
     > ul {

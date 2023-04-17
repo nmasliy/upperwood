@@ -36,6 +36,10 @@
       margin-bottom: 0;
     }
 
+    &__slider {
+      overflow: hidden;
+    }
+
     &__item {
       width: 290px;
 

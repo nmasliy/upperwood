@@ -3,11 +3,10 @@
   padding-top: 0;
 
   &__nav {
-    display: none;
+    display: flex;
   }
 
   &__title {
-    margin-bottom: 32px;
     font-weight: 600;
     font-size: 24px;
   }
@@ -32,10 +31,6 @@
 
 @media screen and (max-width: 1200px) {
   .gallery {
-    &__title {
-      margin-bottom: 0;
-    }
-
     &__slider {
       overflow: hidden;
     }
@@ -46,10 +41,6 @@
       img {
         height: 232px;
       }
-    }
-
-    &__nav {
-      display: flex;
     }
   }
 }

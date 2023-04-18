@@ -7,42 +7,6 @@
   }
 }
 
-.perfect-scrollbar {
-  .ps__rail-y {
-    border-radius: 10px !important;
-    width: 48px !important;
-    background: transparent !important;
-    opacity: 1 !important;
-
-    &::before {
-      content: "";
-      position: absolute;
-      right: 23px;
-      top: 0;
-      width: 2px;
-      height: 100%;
-      background: rgba($primary-color, 10%);
-    }
-  }
-
-  .ps__thumb-y {
-    right: 0 !important;
-    width: 48px !important;
-    background: transparent !important;
-    cursor: grab;
-
-    &::before {
-      content: "";
-      position: absolute;
-      right: 23px;
-      top: 0;
-      width: 2px;
-      height: 100%;
-      background: $primary-color;
-    }
-  }
-}
-
 .choices {
   &::before {
     content: "";

@@ -203,7 +203,7 @@
     justify-content: center;
     border: none;
     border-radius: 0;
-    padding-right: 10px;
+    padding: 0 4px;
     height: 48px;
     box-shadow: none;
     background: transparent;
@@ -211,6 +211,14 @@
     .noUi-base {
       border-radius: 10px;
       height: 2px;
+    }
+
+    .noUi-handle.noUi-handle-lower {
+      right: -26px;
+    }
+
+    .noUi-handle.noUi-handle-upper {
+      right: 0;
     }
 
     .noUi-connect {
@@ -465,10 +473,6 @@
 @media screen and (max-width: 940px) {
   .filter-radio__text {
     font-size: 14px;
-  }
-
-  .filter-range__slider {
-    padding: 0 20px;
   }
 
   .filter {

@@ -11,10 +11,6 @@
     font-size: 24px;
   }
 
-  &__slider {
-    overflow: visible;
-  }
-
   &__item {
     width: 408px;
 
@@ -31,10 +27,6 @@
 
 @media screen and (max-width: 1200px) {
   .gallery {
-    &__slider {
-      overflow: hidden;
-    }
-
     &__item {
       width: 290px;
 
@@ -53,10 +45,6 @@
       img {
         height: 192px;
       }
-    }
-
-    &__slider {
-      overflow: hidden;
     }
 
     &__nav {

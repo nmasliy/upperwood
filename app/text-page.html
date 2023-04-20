@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Upperwood - Поставщик сантехники и мебели оптом</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+    <header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-inner">
+        <a class="header__logo" href="./">
+          <picture>
+            <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+            <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" width="197" height="57" alt="Логотип">
+          </picture>
+        </a>
+        <div class="header__caption">Поставщик сантехники и мебели оптом</div>
+        <div class="header__info">
+          <ul>
+            <li>Нижний Новгород <br> ул. Вятская 41</li>
+            <li class="header__info-hidden-sm">Ежедневно с 8:00 до 17:00</li>
+            <li>
+              <div><a href="tel:88002012437">8 800 201-24-37</a></div>
+              <div class="header__info-hidden-sm">Звонок по России бесплатный</div>
+              <div><a href="mailto:optmebelit@yandex.ru">optmebelit@yandex.ru</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__main">
+    <div class="container">
+      <div class="header__main-inner">
+        <button class="header__burger burger"><span class="burger__line"></span></button>
+        <div class="header__catalog submenu">
+          <button class="header__catalog-btn btn-primary">Каталог товаров</button>
+          <ul>
+            <li class="header__catalog-submenu submenu">
+              <a href="#">Мебель в ванную</a>
+              <ul>
+                <li><a href="#">Тумбы под раковину</a></li>
+                <li><a href="#">Тумбы с раковинами</a></li>
+                <li><a href="#">Шкафы-пеналы</a></li>
+                <li><a href="#">Тумбы под стиральную машину</a></li>
+                <li><a href="#">Тумбы под стиральную машину с раковинами</a></li>
+                <li><a href="#">Комплект тумба со столешницей и раковиной</a></li>
+                <li><a href="#">Комплект столешница с кронштейнами и раковиной</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Зеркала</a></li>
+            <li class="header__catalog-submenu submenu">
+              <a href="#">Раковины</a>
+              <ul>
+                <li><a href="#">Встраиваемые и полувстраиваемые</a></li>
+                <li><a href="#">Накладные раковины</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Кухонные мойки</a></li>
+          </ul>
+        </div>
+        <!-- <div class="header__search-box is-active"> - чтобы отобразить подсказки -->
+        <div class="header__search-box">
+          <form action="#">
+            <input type="search" placeholder="Введите запрос">
+            <button></button>
+          </form>
+          <div class="header__search-hints header__search-hints--lg">
+            <!-- Пример с подсказками  в несколько строк и переполнением -->
+            <div class="header__hints-container">
+              <div class="header__hints-inner">
+                <ul>
+                  <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                  <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                  <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                  <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                  <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                  <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                  <li><a href="#">Тумба под стиральную машину Uperwood Tanos (60 см, напольная, белая)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Пример с подсказками  в одну строку -->
+          <!-- <ul>
+            <li><a href="#">Мебель в ванную</a></li>
+            <li><a href="#">Зеркала</a></li>
+            <li><a href="#">Раковины</a></li>
+            <li><a href="#">Кухонные мойки</a></li>
+          </ul> -->
+        </div>
+        <nav class="header__nav">
+          <ul>
+            <li><a href="#">Новинки</a></li>
+            <li><a href="#">Бренды</a></li>
+            <li class="header__nav-submenu submenu">
+              <a href="#">Условия сотрудничества</a>
+              <ul>
+                <li><a href="#">Оптовым клиентам</a></li>
+                <li><a href="#">Строительным компаниям</a></li>
+                <li><a href="#">Дизайнерам</a></li>
+                <li><a href="#">Поставщикам</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-submenu submenu">
+              <a href="#">Покупателям</a>
+              <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Доставка</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Мобильное меню -->
+  <div class="menu">
+    <div class="menu__head">
+      <div class="menu__logo">
+        <picture>
+          <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+          <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" width="77" height="22" alt="Логотип">
+        </picture>
+      </div>
+      <button class="menu__close burger burger--close"></button>
+    </div>
+    <div class="menu__body">
+      <nav class="menu__nav">
+        <ul>
+          <li class="menu__catalog submenu">
+            <a href="#">Каталог товаров</a>
+            <ul>
+              <li class="menu__submenu submenu">
+                <a href="#">Мебель в ванную</a>
+                <ul>
+                  <li><a href="#">Тумбы под раковину</a></li>
+                  <li><a href="#">Тумбы с раковинами</a></li>
+                  <li><a href="#">Шкафы-пеналы</a></li>
+                  <li><a href="#">Тумбы под стиральную машину</a></li>
+                  <li><a href="#">Тумбы под стиральную машину с раковинами</a></li>
+                  <li><a href="#">Комплект тумба со столешницей и раковиной</a></li>
+                  <li><a href="#">Комплект столешница с кронштейнами и раковиной</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Зеркала</a></li>
+              <li class="menu__submenu submenu">
+                <a href="#">Раковины</a>
+                <ul>
+                  <li><a href="#">Встраиваемые и полувстраиваемые</a></li>
+                  <li><a href="#">Накладные раковины</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Кухонные мойки</a></li>
+            </ul>
+          </li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Новинки</a></li>
+          <li><a href="#">Бренды</a></li>
+          <li class="menu__submenu submenu">
+            <a href="#">Условия сотрудничества</a>
+            <ul>
+              <li><a href="#">Оптовым клиентам</a></li>
+              <li><a href="#">Строительным компаниям</a></li>
+              <li><a href="#">Дизайнерам</a></li>
+              <li><a href="#">Поставщикам</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Оплата</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+    <!-- класс "text" добавляется для текстовых блоков -->
+<section class="text section-offset">
+	<div class="container">
+		<div class="text__inner">
+			<h1>Lorem ipsum lorem ipsum</h1>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae tempora sapiente magni inventore provident
+				dolore minima maxime nostrum laudantium. Aliquam id assumenda omnis minus amet fuga obcaecati! Autem, optio a!
+			</p>
+			<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis </h2>
+			<ul>
+				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quae quia natus </li>
+				<li>dignissimos repellendus, tempora id autem amet aut sed. Deserunt adipisci assumenda sapiente quisquam magni
+					quibusdam quaerat quae voluptatem!</li>
+				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quae quia natus </li>
+			</ul>
+			<ol>
+				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quae quia natus </li>
+				<li>dignissimos repellendus, tempora id autem amet aut sed. Deserunt adipisci assumenda sapiente quisquam magni
+					quibusdam quaerat quae voluptatem!</li>
+				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quae quia natus </li>
+			</ol>
+		</div>
+	</div>
+</section>
+    <footer class="footer">
+  <div class="container container--sm">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__col footer__col-master">
+          <div class="footer__col-caption">Руководитель оптовых продаж</div>
+          <ul>
+            <li>Хлынов Виталий Петрович</li>
+            <li>Тел: <a href="tel:+79535632543">+7 953 563-25-43</a></li>
+            <li>Тел: <a href="tel:78312746605">+7 831 274-66-05</a></li>
+            <li>Email: <a href="mailto:optmebelit@yandex.ru">optmebelit@yandex.ru</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col-about">
+          <div class="footer__col-caption">О компании</div>
+          <ul>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Реквизиты</a></li>
+            <li><a href="#">Типовой договор поставки</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col-service">
+          <div class="footer__col-caption">Сервис</div>
+          <ul>
+            <li><a href="#">Пункты самовывоза</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Обмен и возврат</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col-terms">
+          <div class="footer__col-caption">Условия сотрудничества</div>
+          <ul>
+            <li><a href="#">Оптовым клиентам</a></li>
+            <li><a href="#">Строительным компаниям </a></li>
+            <li><a href="#">Дизайнерам</a></li>
+            <li><a href="#">Поставщикам</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col-socials">
+          <div class="footer__col-caption">Мы в социальных сетях</div>
+          <ul class="footer__socials">
+            <li>
+              <a href="#">
+                <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20.6406 9.41981C22.5006 11.1478 22.8846 11.9758 22.9446 12.0838C23.7126 13.3558 22.1046 13.4518 22.1046 13.4518L19.0086 13.4998C19.0086 13.4998 18.3366 13.6318 17.4726 13.0318C16.3086 12.2398 15.1926 10.1638 14.3646 10.4398C13.5126 10.7158 13.5366 12.5758 13.5366 12.5758C13.5366 12.5758 13.5366 12.8398 13.3446 13.0438C13.1286 13.2718 12.7086 13.1878 12.7086 13.1878H11.3286C11.3286 13.1878 8.26859 13.4998 5.59259 10.7038C2.65259 7.65581 0.0605874 1.6558 0.0605874 1.6558C0.0605874 1.6558 -0.0834126 1.2958 0.0725874 1.0918C0.252587 0.899805 0.756587 0.899805 0.756587 0.899805H4.06859C4.06859 0.899805 4.39259 0.899805 4.59659 1.0918C4.77659 1.2238 4.88459 1.4998 4.88459 1.4998C4.88459 1.4998 5.41259 2.8318 6.13259 4.0558C7.51259 6.44381 8.14859 6.95981 8.59259 6.70781C9.31259 6.3358 9.10859 3.3358 9.10859 3.3358C9.10859 3.3358 9.12059 2.24381 8.76059 1.76381C8.48459 1.39181 7.95659 1.2718 7.72859 1.2478C7.53659 1.2238 7.84859 0.791804 8.24459 0.587804C8.84459 0.299804 9.88859 0.299805 11.1366 0.299805C12.1086 0.299805 12.3846 0.371805 12.7566 0.455805C13.9086 0.731805 13.5126 1.7998 13.5126 4.3438C13.5126 5.1718 13.3926 6.2998 13.9566 6.69581C14.2086 6.8638 14.8326 6.7198 16.3926 4.0918C17.1126 2.8438 17.6646 1.3678 17.6646 1.3678C17.6646 1.3678 17.7846 1.1158 17.9646 0.995805C18.1566 0.899805 18.4206 0.899805 18.4206 0.899805H21.9006C21.9006 0.899805 22.9566 0.779805 23.1246 1.2478C23.3046 1.7398 22.7286 2.9038 21.3006 4.7878C18.9726 7.9078 18.7086 7.61981 20.6406 9.41981Z"
+                    fill="white" />
+                </svg>
+                <span>Вконтакте</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col-extra">
+          <div class="footer__col-caption">Дополнительно</div>
+          <ul>
+            <li> <a href="#">Предложить сотрудничество</a></li>
+            <li> <a href="#">Обратная связь</a></li>
+            <li> <a href="#">Открытые вакансии</a></li>
+          </ul>
+          <div class="footer__buttons">
+            <button class="footer__btn btn-accent" data-modal-open="modal-price">Получить оптовый прайс</button>
+            <a class="footer__btn btn-outline" href="#">Купить в розницу</a>
+          </div>
+        </div>
+        <div class="footer__col footer__col-buttons">
+          <div class="footer__buttons">
+            <button class="footer__btn btn-accent" data-modal-open="modal-price">Получить оптовый прайс</button>
+            <a class="footer__btn btn-outline" href="#">Купить в розницу</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy">©2023 ООО Мебелит Все права защищены</div>
+        <ul class="footer__links">
+          <li class="footer__cookie"><a href="#" target="_blank">Политика Cookies</a></li>
+          <li><a href="#" target="_blank">Политика конфиденциальности</a></li>
+          <li><a href="#" target="_blank">Пользовательское соглашение</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+
+  <div class="modal modal-price" id="modal-price" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner modal-price__inner">
+			<div class="lead">
+				<div class="modal-price__body">
+					<div class="lead__inner">
+						<h3 class="modal-price__title lead__title title title-sm">Получите оптовый прайс с&nbsp;актуальными ценами
+							на почту</h3>
+						<h4 class="lead__subtitle">Заполните заявку и мы вышлем вам прайс с оптовыми ценами. Наш менеджер поможет
+							вам подобрать ассортимент и предложит персональную скидку от вашего потенциального объёма.</h4>
+						<div class="lead__content modal-price__content">
+							<div class="lead__img">
+								<picture>
+									<source srcset="img/lead.webp 1x, img/lead@2x.webp 2x" type="image/webp">
+									<img loading="lazy" src="img/lead.jpg" srcset="img/lead.jpg 1x, img/lead@2x.jpg 2x" width="350"
+										height="342" alt="фото девушки">
+								</picture>
+							</div>
+							<form action="#" class="lead__form form">
+								<div class="form__main">
+									<div class="form__item">
+										<input type="text" placeholder="Введите ФИО*">
+									</div>
+									<div class="form__item">
+										<input class="input-phone" type="text" placeholder="Введите номер телефона*">
+									</div>
+									<div class="form__item">
+										<input type="email" placeholder="Введите почту">
+									</div>
+								</div>
+								<div class="form__footer">
+									<button class="form__btn btn-accent-lg">Получить оптовый прайс</button>
+									<div class="form__caption">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal__close" data-modal-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M17.3996 2.2921L15.7076 0.600098L8.99961 7.3081L2.29161 0.600098L0.599609 2.2921L7.30761 9.0001L0.599609 15.7081L2.29161 17.4001L8.99961 10.6921L15.7076 17.4001L17.3996 15.7081L10.6916 9.0001L17.3996 2.2921Z"
+						fill="white" />
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-price" id="modal-price-full" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner modal-price__inner modal-price__inner--lg">
+			<div class="lead">
+				<div class="modal-price__body">
+					<div class="lead__inner">
+						<h3 class="modal-price__title lead__title title title-sm">Получите оптовый прайс с&nbsp;актуальными ценами
+							на почту</h3>
+						<h4 class="lead__subtitle">Заполните заявку и мы вышлем вам прайс с оптовыми ценами. Наш менеджер поможет
+							вам подобрать ассортимент и предложит персональную скидку от вашего потенциального объёма.</h4>
+						<div class="lead__content modal-price__content">
+							<div class="lead__img">
+								<picture>
+									<source srcset="img/lead.webp 1x, img/lead@2x.webp 2x" type="image/webp">
+									<img loading="lazy" src="img/lead.jpg" srcset="img/lead.jpg 1x, img/lead@2x.jpg 2x" width="350"
+										height="342" alt="фото девушки">
+								</picture>
+							</div>
+							<form action="" class="lead__form form">
+								<div class="form__main">
+									<div class="form__item">
+										<input type="text" placeholder="Введите ФИО*">
+									</div>
+									<div class="form__item">
+										<input type="text" placeholder="Введите название компании">
+									</div>
+									<div class="form__item">
+										<select class="custom-select">
+											<option placeholder value="">Тип клиента</option>
+											<option value="Сеть магазинов">Сеть магазинов</option>
+											<option value="Строительная компания">Строительная компания</option>
+											<option value="Дистрибьютор">Дистрибьютор</option>
+											<option value="Для собственных нужд">Для собственных нужд</option>
+											<option value="Частное лицо">Частное лицо</option>
+											<option value="Другое">Другое</option>
+										</select>
+									</div>
+									<div class="form__item">
+										<input class="input-phone" type="text" placeholder="Введите номер телефона*">
+									</div>
+									<div class="form__item">
+										<input type="email" placeholder="Введите почту">
+									</div>
+									<div class="form__item">
+										<input type="text" placeholder="Комментарий к заявке">
+									</div>
+								</div>
+								<div class="form__footer">
+									<button class="form__btn btn-accent-lg">Получить оптовый прайс</button>
+									<div class="form__caption">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal__close" data-modal-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M17.3996 2.2921L15.7076 0.600098L8.99961 7.3081L2.29161 0.600098L0.599609 2.2921L7.30761 9.0001L0.599609 15.7081L2.29161 17.4001L8.99961 10.6921L15.7076 17.4001L17.3996 15.7081L10.6916 9.0001L17.3996 2.2921Z"
+						fill="white" />
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-thanks" id="modal-thanks" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner modal-thanks__inner">
+			<div class="modal__content">
+				<div class="modal__img">
+					<img src="img/thanks.svg" width="250" height="159" alt="">
+				</div>
+				<div class="modal__title modal__title--primary">Спасибо</div>
+				<div class="modal__subtitle">Номер вашего обращения #5664</div>
+				<p>
+					В ближайшее время менеджер свяжется с&nbsp;вами и ответит на&nbsp;все&nbsp;вопросы.
+				</p>
+				<p>
+					График работы наших менеджеров (по московскому времени): <br>
+					Понедельник-пятница с 8:00–17:00 <br>
+					Суббота, воскресенье — выходные <br>
+					</ul>
+				</p>
+				<div class="modal__caption">Если мы не перезвонили вам в течение дня, возможно, сегодня выходной или праздничный
+					день, мы свяжемся с вами в понедельник или другой рабочий день</div>
+				<a class="modal__btn btn-outline-lg" href="./">Вернуться на главную</a>
+			</div>
+			<div class="modal__close" data-modal-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M17.3996 2.2921L15.7076 0.600098L8.99961 7.3081L2.29161 0.600098L0.599609 2.2921L7.30761 9.0001L0.599609 15.7081L2.29161 17.4001L8.99961 10.6921L15.7076 17.4001L17.3996 15.7081L10.6916 9.0001L17.3996 2.2921Z"
+						fill="#313896" />
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-thanks" id="modal-thanks-price" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner modal-thanks__inner">
+			<div class="modal__content">
+				<div class="modal__img">
+					<img src="img/thanks.svg" width="250" height="159" alt="">
+				</div>
+				<div class="modal__title modal__title--primary">Спасибо за заявку</div>
+				<div class="modal__subtitle">Номер вашего обращения #5664</div>
+				<p>
+					Ваш запрос отправлен успешно. <br>
+					Мы отправим вам оптовый прайс на указанную почту в&nbsp;ближайшее время.
+				</p>
+				<p>
+					График работы наших менеджеров (по московскому времени): <br>
+					Понедельник-пятница с 8:00–17:00 <br>
+					Суббота, воскресенье — выходные <br>
+					</ul>
+				</p>
+				<div class="modal__caption">Если на вашу почту не придёт прайс в течение одного рабочего дня, возможно,
+					вы указали неверный почтовый адрес. Отправьте ещё раз ваш запрос на почту, которая указана в контактах
+					на сайте: <a href="#" target="_blank">optmebelit@yandex.ru</a></div>
+				<a class="modal__btn btn-outline-lg" href="./">Вернуться на главную</a>
+			</div>
+			<div class="modal__close" data-modal-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M17.3996 2.2921L15.7076 0.600098L8.99961 7.3081L2.29161 0.600098L0.599609 2.2921L7.30761 9.0001L0.599609 15.7081L2.29161 17.4001L8.99961 10.6921L15.7076 17.4001L17.3996 15.7081L10.6916 9.0001L17.3996 2.2921Z"
+						fill="#313896" />
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal--bg-primary modal-call" id="modal-call" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner modal-call__inner">
+			<div class="modal__title modal__title--offset">Обратный звонок</div>
+			<form action="#" class="modal__form form">
+				<div class="form__main">
+					<div class="form__item">
+						<input type="text" placeholder="Введите ФИО*">
+					</div>
+					<div class="form__item">
+						<input class="input-phone" type="text" placeholder="Введите номер телефона*">
+					</div>
+					<div class="form__item">
+						<textarea placeholder="Комментарий"></textarea>
+					</div>
+				</div>
+				<div class="form__footer">
+					<button class="form__btn btn-accent-lg">Отправить сообщение</button>
+					<div class="form__caption">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+				</div>
+			</form>
+			<div class="modal__close" data-modal-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M17.3996 2.2921L15.7076 0.600098L8.99961 7.3081L2.29161 0.600098L0.599609 2.2921L7.30761 9.0001L0.599609 15.7081L2.29161 17.4001L8.99961 10.6921L15.7076 17.4001L17.3996 15.7081L10.6916 9.0001L17.3996 2.2921Z"
+						fill="white" />
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal--bg-primary modal-message" id="modal-message" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner modal-call__inner">
+			<div class="modal__title modal__title--offset">Написать письмо</div>
+			<form action="#" class="modal__form form">
+				<div class="form__main">
+					<div class="form__item">
+						<input type="text" placeholder="Введите ФИО*">
+					</div>
+					<div class="form__item">
+						<input class="input-phone" type="text" placeholder="Введите номер телефона*">
+					</div>
+					<div class="form__item">
+						<input type="email" placeholder="Введите почту">
+					</div>
+					<div class="form__item">
+						<textarea placeholder="Текст сообщения"></textarea>
+					</div>
+					<div class="form__item">
+						<label class="form__file">
+							<input type="file">
+							<span>Прикрепить файл</span>
+						</label>
+					</div>
+				</div>
+				<div class="form__footer">
+					<button class="form__btn btn-accent-lg">Отправить сообщение</button>
+					<div class="form__caption">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</div>
+				</div>
+			</form>
+			<div class="modal__close" data-modal-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M17.3996 2.2921L15.7076 0.600098L8.99961 7.3081L2.29161 0.600098L0.599609 2.2921L7.30761 9.0001L0.599609 15.7081L2.29161 17.4001L8.99961 10.6921L15.7076 17.4001L17.3996 15.7081L10.6916 9.0001L17.3996 2.2921Z"
+						fill="white" />
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="overlay"></div>
+  <script>
+  function onSubmit() {
+    window.modals.closeAll();
+    
+    setTimeout(function() {
+      window.modals.open('modal-thanks');
+    }, window.modals.options.transition + 10)
+  }
+</script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -11,7 +11,7 @@ function initTagsWrap() {
     const row1Items = row1.querySelectorAll('li');
     const row2Items = row2.querySelectorAll('li');
 
-		if (row1Items.length < 10) return;
+		if (+row1Items.length + +row2Items.length < 10) return;
 
     if (window.innerWidth <= 940) {
 			if (row2Items.length <= 0) {

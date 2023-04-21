@@ -97,7 +97,8 @@
 .breadcrumbs {
   @include hide-scroll;
 
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   padding: 15px 0 44px;
   font-size: 14px;
 
@@ -315,7 +316,8 @@
       @include hide-scroll;
 
       flex-wrap: nowrap;
-      overflow: scroll;
+      overflow-x: scroll;
+      overflow-y: hidden;
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
@@ -343,7 +345,8 @@
     @include hide-scroll;
 
     flex-wrap: nowrap;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 
@@ -417,7 +420,8 @@
     @include hide-scroll;
 
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     margin-right: -15px;
     padding-right: 15px;
     white-space: nowrap;

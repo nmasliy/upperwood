@@ -107,6 +107,7 @@
 
   li {
     flex-shrink: 0;
+    margin: 0 1px;
     text-decoration: underline;
     color: $primary-color;
 
@@ -314,7 +315,9 @@
       @include hide-scroll;
 
       flex-wrap: nowrap;
-      overflow: auto;
+      overflow: scroll;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
     }
   }
 }
@@ -340,7 +343,9 @@
     @include hide-scroll;
 
     flex-wrap: nowrap;
-    overflow: auto;
+    overflow: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 
     &__item {
       padding: 4px 0 4px 12px;
@@ -412,9 +417,11 @@
     @include hide-scroll;
 
     display: flex;
-    overflow: auto;
+    overflow: scroll;
     margin-right: -15px;
     padding-right: 15px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 
     &__row {
       @include mr(4px);

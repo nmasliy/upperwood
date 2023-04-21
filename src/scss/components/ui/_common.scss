@@ -148,21 +148,18 @@
 }
 
 .tags {
-  margin: -4px;
   font-size: 14px;
 
   &__row {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  &__row--2 {
-    display: none;
+    margin: -6px;
+    padding-bottom: 6px;
   }
 
   li {
     flex-shrink: 0;
-    margin: 4px;
+    margin: 6px;
     border: 1px solid rgba(33, 33, 33, 50%);
     text-align: center;
     background: #fff;
@@ -311,6 +308,15 @@
     font-size: 32px;
     line-height: 1.4;
   }
+
+  .tags {
+    &__row {
+      @include hide-scroll;
+
+      flex-wrap: nowrap;
+      overflow: auto;
+    }
+  }
 }
 
 @media screen and (max-width: 940px) {
@@ -319,16 +325,13 @@
   }
 
   .tags {
-    @include hide-scroll;
-
-    overflow: auto;
     font-size: 10px;
 
     &__row {
-      flex-wrap: nowrap;
+      margin: -3px -2px;
 
-      &--2 {
-        display: flex;
+      li {
+        margin: 3px 2px;
       }
     }
   }
@@ -406,16 +409,19 @@
 
 @media screen and (max-width: 520px) {
   .tags {
+    @include hide-scroll;
+
+    display: flex;
+    overflow: auto;
     margin-right: -15px;
+    padding-right: 15px;
 
     &__row {
-      &::after {
-        content: "";
-        display: block;
-        flex-shrink: 0;
-        margin: -4px;
-        width: 15px;
-      }
+      @include mr(4px);
+
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+      overflow: visible;
     }
   }
 

@@ -122,6 +122,10 @@
       background-repeat: no-repeat;
       transition: transform $transition, background $transition;
     }
+
+    &--primary {
+      color: $primary-color;
+    }
   }
 
   &__content {
@@ -488,5 +492,11 @@
       align-items: center;
       justify-content: space-between;
     }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .filter {
+    max-width: 100%;
   }
 }

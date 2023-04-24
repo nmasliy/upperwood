@@ -108,12 +108,14 @@
   }
 
   &__btn-all {
-    display: inline-block;
+    display: block;
     border: none;
     border-bottom: 2px solid $primary-color;
     padding: 9px 16px 9px 0;
+    width: 100%;
     font-weight: 600;
     font-size: 18px;
+    text-align: left;
     background: #fff;
     cursor: pointer;
     user-select: none;

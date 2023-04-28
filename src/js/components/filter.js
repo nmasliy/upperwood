@@ -2,15 +2,20 @@ const html = document.querySelector('html');
 const filter = document.querySelector('.filter');
 const filterClose = document.querySelector('.filter__close');
 const filterArrow = document.querySelector('.filter__arrow');
+const otherFilters = document.querySelector('.filter__item--other');
 const overlay = document.querySelector('.overlay');
 const filterBtn = document.querySelector('.catalog__filter-btn');
 const TRANSITION_DELAY = 300;
 
 if (filter) {
+	if (window.innerWidth <= 520) {
+		otherFilters.classList.add('is-active');
+	}
+
+	
 	filterBtn.addEventListener('click', toggleFilter)
 	filterClose.addEventListener('click', closeFilter)
 	filterArrow.addEventListener('click', closeFilter)
-
 
 	overlay.addEventListener('click', closeFilter);
 
@@ -21,6 +26,9 @@ if (filter) {
 		} else if (filter.classList.contains('is-active')) {
 			overlay.classList.add('is-active');
 			html.classList.add('disable-scroll');
+		}
+		if (window.innerWidth <= 520) {
+			otherFilters.classList.add('is-active');
 		}
 	})
 

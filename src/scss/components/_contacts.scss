@@ -97,9 +97,49 @@
 
   &__frame {
     position: relative;
+  }
 
-    iframe {
-      width: 100%;
+  &__el {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    height: 594px;
+
+    * {
+      [class*="map-copyrights-promo"] {
+        /* stylelint-disable-next-line declaration-no-important */
+        display: none !important;
+      }
+    }
+  }
+
+  &__marker-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 68px;
+    background: url("../img/map-icon.svg") center no-repeat;
+    transform: translate(-50%, -50%);
+
+    span {
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      display: inline-block;
+      vertical-align: middle;
+      overflow: hidden;
+      border-radius: 6px;
+      padding: 3px 6px 4px;
+      max-width: 180px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: inherit;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: #333;
+      background: hsla(0deg, 0%, 100%, 90%);
+      transform: translateY(-50%);
     }
   }
 
@@ -117,12 +157,6 @@
         display: block;
       }
     }
-  }
-
-  &__el {
-    position: relative;
-    display: flex;
-    overflow: hidden;
   }
 }
 
@@ -247,10 +281,8 @@
   }
 
   .contacts-map {
-    &__frame {
-      iframe {
-        height: 506px;
-      }
+    &__el {
+      height: 506px;
     }
 
     &__cards {
@@ -331,7 +363,7 @@
       max-width: 290px;
     }
 
-    &__frame iframe {
+    &__el {
       height: 429px;
     }
 
@@ -416,10 +448,8 @@
       inset: 0;
     }
 
-    &__frame {
-      iframe {
-        height: 295px;
-      }
+    &__el {
+      height: 295px;
     }
 
     &__controls {

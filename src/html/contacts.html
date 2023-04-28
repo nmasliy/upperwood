@@ -9,7 +9,8 @@
 			</div>
 			<h1 class="contacts__title title">Адреса наших складов</h1>
 			<ul class="contacts__addresses addresses-box">
-				<li class="addresses-box__item" data-tab="1" data-value="Нижний Новгород">
+				<li class="addresses-box__item" data-tab="1" data-value="Нижний Новгород" data-coords="[56.23447, 43.966056]"
+					data-title="Вятская улица">
 					<div class="addresses-box__content">
 						<div class="addresses-box__icon">
 							<img src="img/marker-icon.svg" width="31" height="44" alt="иконка маркера">
@@ -20,7 +21,8 @@
 							Приокский район, ул.Вятская, д.41
 						</p>
 				</li>
-				<li class="addresses-box__item" data-tab="2" data-value="Москва">
+				<li class="addresses-box__item" data-tab="2" data-value="Москва" data-coords="[55.775150, 37.522611]"
+					data-title="5-я Магистральная улица, 15с1">
 					<div class="addresses-box__content">
 						<div class="addresses-box__icon">
 							<img src="img/marker-icon.svg" width="31" height="44" alt="иконка маркера">
@@ -30,7 +32,8 @@
 							123007, г.Москва, ​Хорошёвский район, <br>улица 5-я Магистральная д.15,&nbsp;стр. 1
 						</p>
 				</li>
-				<li class="addresses-box__item" data-tab="3" data-value="Екатеринбург">
+				<li class="addresses-box__item" data-tab="3" data-value="Екатеринбург" data-coords="[56.838011, 60.597474]"
+					data-title="Западная промзона, д. 24а">
 					<div class="addresses-box__content">
 						<div class="addresses-box__icon">
 							<img src="img/marker-icon.svg" width="31" height="44" alt="иконка маркера">
@@ -52,9 +55,12 @@
 				<div class="contacts-map__select accordion-select">
 					<div class="accordion-select__current" data-value="Нижний Новгород">Нижний Новгород</div>
 					<ul class="accordion-select__list">
-						<li class="accordion-select__item" data-tab="1" data-value="Нижний Новгород">Нижний Новгород</li>
-						<li class="accordion-select__item" data-tab="2" data-value="Москва">Москва</li>
-						<li class="accordion-select__item" data-tab="3" data-value="Екатеринбург">Екатеринбург</li>
+						<li class="accordion-select__item" data-tab="1" data-value="Нижний Новгород"
+							data-coords="[56.23447, 43.966056]">Нижний Новгород</li>
+						<li class="accordion-select__item" data-tab="2" data-value="Москва" data-coords="[55.775150, 37.522611]">
+							Москва</li>
+						<li class="accordion-select__item" data-tab="3" data-value="Екатеринбург"
+							data-coords="[56.838011, 60.597474]">Екатеринбург</li>
 					</ul>
 				</div>
 			</div>
@@ -220,14 +226,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="contacts-map__el"><a
-						href="https://yandex.kz/maps/47/nizhny-novgorod/?utm_medium=mapframe&utm_source=maps"
-						style="color:#eee;font-size:12px;position:absolute;top:0px;">Нижний Новгород</a><a
-						href="https://yandex.kz/maps/47/nizhny-novgorod/house/vyatskaya_ulitsa_41/YEoYfwFmSUABQFtsfX5ydXhkZA==/?ll=43.966057%2C56.234470&utm_medium=mapframe&utm_source=maps&z=17.09"
-						style="color:#eee;font-size:12px;position:absolute;top:14px;">Вятская улица, 41 — Яндекс Карты</a><iframe
-						src="https://yandex.kz/map-widget/v1/?ll=43.966057%2C56.234470&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njk1ODYzNRJK0KDQvtGB0YHQuNGPLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCwg0JLRj9GC0YHQutCw0Y8g0YPQu9C40YbQsCwgNDEiCg0-3S9CFRnwYEI%2C&z=17.09"
-						width="1580" height="594" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-				</div>
+				<div class="contacts-map__el" id="contacts-map"></div>
 			</div>
 		</div>
 	</div>

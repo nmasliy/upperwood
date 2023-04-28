@@ -1,6 +1,7 @@
 import './components/select';
 import './components/menu';
 import './components/scroll';
+import './components/map';
 import './components/tabs';
 import './components/mask';
 import './components/modals';

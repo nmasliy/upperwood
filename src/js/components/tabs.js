@@ -1,4 +1,5 @@
 import { initTabs } from '../functions/tabs';
+import { setCenter } from './map';
 
 initTabs('.delivery__tabs li', '.delivery__tab-content');
 initTabs('.map__icon', '.map__info');
@@ -15,6 +16,7 @@ function updateAddress(target) {
 
 	selectCurrent.textContent = box.dataset.value;
 	selectCurrent.dataset.value = box.dataset.value;
+	setCenter(JSON.parse(box.dataset.coords));
 }
 
 

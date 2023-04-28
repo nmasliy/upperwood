@@ -1,3 +1,5 @@
+import { setCenter } from './map';
+
 const select = document.querySelector('.accordion-select');
 
 if (select) {
@@ -14,6 +16,8 @@ if (select) {
 		else if (itemTarget) {
       current.textContent = itemTarget.dataset.value;
       current.dataset.value = itemTarget.dataset.value;
+      current.dataset.coords = itemTarget.dataset.coords;
+      setCenter(JSON.parse(current.dataset.coords));
       select.classList.remove('is-active');
     } else {
       select.classList.remove('is-active');

@@ -167,6 +167,11 @@
   background: #fff;
   gap: 16px;
 
+  &__info {
+    width: 100%;
+    max-width: 320px;
+  }
+
   &__text {
     overflow: hidden;
     margin-bottom: 4px;
@@ -251,6 +256,7 @@
     }
 
     &__price {
+      line-height: 2.1;
       text-align: center;
     }
 
@@ -471,6 +477,11 @@
       justify-content: flex-start;
     }
 
+    &__info {
+      margin: 0;
+      max-width: 100%;
+    }
+
     &__text {
       display: none;
     }
@@ -491,6 +502,7 @@
       }
 
       &__price {
+        line-height: 1.6;
         text-align: left;
       }
 

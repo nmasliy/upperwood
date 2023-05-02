@@ -323,6 +323,10 @@
       display: none;
     }
 
+    &__select {
+      max-width: 290px;
+    }
+
     &__view-buttons {
       margin-left: auto;
     }

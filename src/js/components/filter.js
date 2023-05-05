@@ -8,7 +8,7 @@ const filterBtn = document.querySelector('.catalog__filter-btn');
 const TRANSITION_DELAY = 300;
 
 if (filter) {
-	if (window.innerWidth <= 520) {
+	if (window.innerWidth <= 1200) {
 		otherFilters.classList.add('is-active');
 	}
 
@@ -20,20 +20,20 @@ if (filter) {
 	overlay.addEventListener('click', closeFilter);
 
 	window.addEventListener('resize', () => {
-		if (window.innerWidth > 940) {
+		if (window.innerWidth > 1200) {
 			overlay.classList.remove('is-active');
 			html.classList.remove('disable-scroll');
 		} else if (filter.classList.contains('is-active')) {
 			overlay.classList.add('is-active');
 			html.classList.add('disable-scroll');
 		}
-		if (window.innerWidth <= 520) {
+		if (window.innerWidth <= 1200) {
 			otherFilters.classList.add('is-active');
 		}
 	})
 
 	function openFilter() {
-		if (window.innerWidth <= 940) {
+		if (window.innerWidth <= 1200) {
 			overlay.style.display = 'block';
 			html.classList.add('disable-scroll');
 		}
@@ -41,7 +41,7 @@ if (filter) {
 
 
     setTimeout(function () {
-		if (window.innerWidth <= 940) {
+		if (window.innerWidth <= 1200) {
       overlay.classList.add('is-active');
 		}
       filter.classList.add('is-active');
@@ -49,7 +49,7 @@ if (filter) {
   }
 
   function closeFilter() {
-		if (window.innerWidth <= 940) {
+		if (window.innerWidth <= 1200) {
 			overlay.classList.remove('is-active');
 			html.classList.remove('disable-scroll');
 		}
@@ -57,7 +57,7 @@ if (filter) {
 
 
     setTimeout(function () {
-		if (window.innerWidth <= 940) {
+		if (window.innerWidth <= 1200) {
       overlay.style.display = '';
 		}
       filter.style.display = '';

@@ -24,7 +24,7 @@
   }
 
   &__item {
-    @include mb(24px);
+    @include mb(16px);
 
     input,
     textarea {
@@ -110,7 +110,7 @@
   }
 
   &__main {
-    margin-bottom: 48px;
+    margin-bottom: 24px;
   }
 
   &__btn {
@@ -214,6 +214,11 @@
       span {
         padding-left: 40px;
         font-size: 12px;
+
+        &::before {
+          width: 40px;
+          height: 40px;
+        }
       }
     }
 
@@ -289,6 +294,10 @@
 
 @media screen and (max-width: 520px) {
   .form {
+    &__item textarea {
+      min-height: 64px;
+    }
+
     &__caption {
       font-size: 8px;
     }

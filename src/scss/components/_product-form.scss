@@ -154,11 +154,12 @@
     }
 
     &__list {
-      gap: 11px;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px 26px;
     }
 
     &__label {
-      height: 32px;
+      height: 40px;
     }
 
     &__select {
@@ -169,6 +170,19 @@
           font-size: 14px;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .product-form {
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 11px;
+    }
+
+    &__label {
+      height: 32px;
     }
   }
 }

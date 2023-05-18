@@ -20,10 +20,18 @@
       display: flex;
     }
   }
+
+  .swiper-pagination {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .reviews {
+    .swiper-pagination {
+      display: flex;
+    }
+
     &__item {
       img {
         height: 425px;

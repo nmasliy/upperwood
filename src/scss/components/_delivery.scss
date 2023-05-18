@@ -329,20 +329,16 @@
     }
 
     &__addresses {
-      @include hide-scroll;
-
-      display: flex;
-      overflow: auto;
-      margin-right: -15px;
-      padding-right: 15px;
-      gap: 0;
+      display: block;
 
       .delivery__col {
-        @include mr(10px);
+        @include mb(16px);
 
-        flex-shrink: 0;
-        width: calc(100% / 3);
-        min-width: 130px;
+        padding: 12px;
+
+        &-content {
+          max-width: 167px;
+        }
       }
     }
 

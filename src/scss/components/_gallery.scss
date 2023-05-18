@@ -23,10 +23,18 @@
       height: 241px;
     }
   }
+
+  .swiper-pagination {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .gallery {
+    .swiper-pagination {
+      display: flex;
+    }
+
     &__item {
       width: 290px;
 

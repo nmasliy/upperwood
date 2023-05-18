@@ -75,19 +75,16 @@
 
 @media screen and (max-width: 520px) {
   .addresses-box {
-    @include hide-scroll;
+    display: block;
 
-    display: flex;
-    overflow: auto;
-    margin-right: -15px;
-    padding-right: 15px;
-    gap: 0;
+    &__content {
+      max-width: 167px;
+    }
 
     &__item {
-      @include mr(10px);
+      @include mb(16px);
 
-      padding: 0 5px 2px;
-      min-width: 130px;
+      padding: 0 12px 12px;
     }
 
     &__title {

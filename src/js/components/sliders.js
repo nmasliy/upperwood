@@ -108,6 +108,10 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
     prevEl: '.reviews__nav .slider-nav__prev',
     nextEl: '.reviews__nav .slider-nav__next',
   },
+  pagination: {
+    el: '.reviews__slider .swiper-pagination',
+    clickable: true,
+  },
   breakpoints: {
     // when window width is >= 320px
     320: {
@@ -132,6 +136,10 @@ const gallerySwiper = new Swiper('.gallery__slider', {
   navigation: {
     prevEl: '.gallery__nav .slider-nav__prev',
     nextEl: '.gallery__nav .slider-nav__next',
+  },
+  pagination: {
+    el: '.gallery__slider .swiper-pagination',
+    clickable: true,
   },
   breakpoints: {
     // when window width is >= 320px

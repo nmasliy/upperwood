@@ -2,17 +2,19 @@
   color: #fff;
 
   &-small--2 {
-    padding: 0 0 96px;
+    padding: 0 0 64px;
   }
 
   &__wrapper {
-    padding: 64px 0;
+    margin: 0 auto;
+    padding: 32px;
+    max-width: 1131px;
     background: $primary-gradient;
   }
 
-  &__inner {
-    margin: 0 auto;
-    max-width: 1070px;
+  &-small__wrapper {
+    padding: 64px 85px;
+    max-width: 1062px;
   }
 
   &__title {
@@ -44,6 +46,7 @@
 
     img {
       width: 100%;
+      max-height: 483px;
     }
   }
 }
@@ -77,17 +80,11 @@
     &__wrapper {
       padding: 64px 32px;
     }
-
-    &__inner {
-      margin: 0 auto;
-      max-width: 960px;
-    }
   }
 
-  .lead-small {
-    &__inner {
-      max-width: 770px;
-    }
+  .lead-small__inner {
+    margin: 0 auto;
+    max-width: 770px;
   }
 }
 

@@ -1,3 +1,10 @@
+#main-map {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  transform-origin: left top;
+}
+
 .map {
   padding-bottom: 280px;
 
@@ -31,26 +38,6 @@
 
   &__item {
     position: absolute;
-
-    &--1 {
-      left: 141px;
-      bottom: 288px;
-    }
-
-    &--2 {
-      left: 191px;
-      bottom: 249px;
-
-      .map__caption {
-        left: 10px;
-        transform: translateX(0);
-      }
-    }
-
-    &--3 {
-      left: 334px;
-      bottom: 186px;
-    }
   }
 
   &__icon {
@@ -132,23 +119,6 @@
     &__title {
       max-width: 770px;
     }
-
-    &__item {
-      &--1 {
-        left: 101px;
-        bottom: 206px;
-      }
-
-      &--2 {
-        left: 139px;
-        bottom: 179px;
-      }
-
-      &--3 {
-        left: 240px;
-        bottom: 132px;
-      }
-    }
   }
 }
 
@@ -180,23 +150,6 @@
 
       p {
         font-size: 14px;
-      }
-    }
-
-    &__item {
-      &--1 {
-        left: 82px;
-        bottom: 166px;
-      }
-
-      &--2 {
-        left: 113px;
-        bottom: 146px;
-      }
-
-      &--3 {
-        left: 196px;
-        bottom: 110px;
       }
     }
 
@@ -235,5 +188,29 @@
     &__items {
       display: none;
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  #main-map {
+    margin-bottom: -300px;
+  }
+}
+
+@media (max-width: 740px) {
+  #main-map {
+    margin-bottom: -350px;
+  }
+}
+
+@media (max-width: 660px) {
+  #main-map {
+    margin-bottom: -470px;
+  }
+}
+
+@media (max-width: 520px) {
+  #main-map {
+    display: none;
   }
 }

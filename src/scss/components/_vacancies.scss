@@ -57,6 +57,8 @@
 
 @media screen and (max-width: 1200px) {
   .vacancies {
+    min-height: auto;
+
     &__title {
       margin-bottom: 64px;
     }
@@ -113,8 +115,6 @@
 
 @media screen and (max-width: 520px) {
   .vacancies {
-    min-height: auto;
-
     &__title {
       margin-bottom: 24px;
     }

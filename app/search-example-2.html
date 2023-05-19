@@ -122,8 +122,9 @@
         <div class="menu__head">
           <div class="menu__logo">
             <picture>
-              <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-              <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" width="77" height="22" alt="Логотип">
+              <source srcset="img/logo.webp" type="image/webp">
+              <source srcset="img/logo.png" type="image/png">
+              <img src="img/logo.png" width="77" height="22" alt="Логотип">
             </picture>
           </div>
           <button class="menu__close burger burger--close"></button>
@@ -1181,16 +1182,11 @@
 	</div>
 </section>
     <section class="map section-offset">
-	<div class="container container--sm">
+	<div id="container" class="container container--sm">
 		<div class="map__inner">
 			<h3 class="map__title title">Наша сантехника и мебель продаётся в 8799 магазинах по всей России</h3>
 			<div class="map__content">
-				<div class="map__img">
-					<picture>
-						<source srcset="img/map.webp 1x, img/map@2x.webp 2x" type="image/webp">
-						<img loading="lazy" src="img/map.jpg" srcset="img/map.jpg 1x, img/map@2x.jpg 2x" width="1280" height="730"
-							alt="Карта">
-					</picture>
+				<div id="main-map">
 				</div>
 				<div class="map__img-mobile">
 					<picture>
@@ -1199,47 +1195,7 @@
 							width="437" height="251" alt="Карта">
 					</picture>
 				</div>
-				<div class="map__items">
-					<div class="map__item map__item--1" data-x="60px">
-						<div class="map__icon" data-tab="1">
-							<div class="map__caption">Москва</div>
-							<img src="img/marker-icon.svg" width="32" height="44" alt="">
-						</div>
-						<div class="map__info" data-tab="1">
-							<div class="map__info-title">Руководитель оптовых продаж Москва</div>
-							<p>Хлынов Виталий Петрович</p>
-							<p>Тел: <a href="tel:+79535632543">+7 953 563-25-43</a></p>
-							<p>Тел: <a href="tel:+78312746605">+7 831 274-66-05</a></p>
-							<p>Почта: <a class="map__link" href="mailto:optmebelit@yandex.ru">optmebelit@yandex.ru</a></p>
-						</div>
-					</div>
-					<div class="map__item map__item--2">
-						<div class="map__icon" data-tab="2">
-							<div class="map__caption">Нижний Новгород</div>
-							<img src="img/marker-icon.svg" width="32" height="44" alt="">
-						</div>
-						<div class="map__info" data-tab="2">
-							<div class="map__info-title">Руководитель оптовых продаж Нижний Новгород</div>
-							<p>Хлынов Виталий Петрович</p>
-							<p>Тел: <a href="tel:+79535632543">+7 953 563-25-43</a></p>
-							<p>Тел: <a href="tel:+78312746605">+7 831 274-66-05</a></p>
-							<p>Почта: <a class="map__link" href="mailto:optmebelit@yandex.ru">optmebelit@yandex.ru</a></p>
-						</div>
-					</div>
-					<div class="map__item map__item--3">
-						<div class="map__icon" data-tab="3">
-							<div class="map__caption">Екатеринбург</div>
-							<img src="img/marker-icon.svg" width="32" height="44" alt="">
-						</div>
-						<div class="map__info" data-tab="3">
-							<div class="map__info-title">Руководитель оптовых продаж Екатеринбург</div>
-							<p>Лаптев Андрей Викторович</p>
-							<p>Тел: <a href="tel:+73432290588">+7 343 229-05-88</a></p>
-							<p>Тел: <a href="tel:+79222292209">+7 922 229-22-09</a></p>
-							<p>Почта: <a class="map__link" href="mailto:ekbopt@sanelit.online">ekbopt@sanelit.online</a></p>
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
 	</div>

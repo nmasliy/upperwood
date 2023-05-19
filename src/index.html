@@ -22,6 +22,58 @@
   @include('html/modals.html')
   @include('html/scripts.html')
 
+  <script>
+    let obj = {
+      0: {
+        city: 'Москва',
+        X: 145,
+        Y: 397,
+        position: 'center',
+        prof: 'Руководитель оптовых продаж Москва',
+        name: 'Хлынов Виталий Петрович',
+        phone: {
+          0: '+7 953 563-25-43',
+          1: '+7 831 274-66-05'
+        },
+        email: {
+          0: 'optmebelit@yandex.ru'
+        }
+      },
+      1: {
+        city: 'Нижний Новгород',
+        X: 195,
+        Y: 435,
+        position: 'left',
+        prof: 'Руководитель оптовых продаж Нижний Новгород',
+        name: 'Хлынов Виталий Петрович',
+        phone: {
+          0: '+7 953 563-25-43',
+          1: '+7 831 274-66-25'
+        },
+        email: {
+          0: 'optmebelit@yandex.ru'
+        }
+      },
+      2: {
+        city: 'Екатеринбург',
+        X: 345,
+        Y: 500,
+        position: 'center',
+        prof: 'Руководитель оптовых продаж Екатеринбург',
+        name: 'Хлынов Виталий Петрович',
+        phone: {
+          0: '+7 953 563-25-43',
+          1: '+7 831 274-66-15'
+        },
+        email: {
+          0: 'optmebelit@yandex.ru'
+        }
+      },
+    };
+
+    window.DrawMap(obj, 'img/map.webp', 'img/marker-icon.svg');
+  </script>
+
 </body>
 
 </html>

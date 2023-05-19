@@ -322,6 +322,10 @@
       -webkit-overflow-scrolling: touch;
     }
   }
+
+  .check-list--sm li {
+    @include mb(16px);
+  }
 }
 
 @media screen and (max-width: 940px) {
@@ -409,7 +413,7 @@
 
     &--sm {
       li {
-        @include mb(0);
+        @include mb(8px);
       }
     }
   }
@@ -465,7 +469,7 @@
 
     &--sm {
       li {
-        @include mb(0);
+        @include mb(4px);
       }
     }
   }

@@ -8,7 +8,7 @@
   &__content {
     display: grid;
     align-items: center;
-    grid-template-columns: 68fr 87fr;
+    grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
 
@@ -24,7 +24,7 @@
     }
 
     img {
-      height: 414px;
+      height: 253px;
       object-position: top;
     }
   }

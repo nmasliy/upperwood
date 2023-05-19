@@ -1,0 +1,191 @@
+function initMap() {
+  if (!document.getElementById('main-map')) return;
+
+  onresizeMap();
+
+  window.onresize = function () {
+    onresizeMap();
+  };
+
+  function DrawMap(obj, mapSrc, iconSrc) {
+    let map = document.getElementById('main-map'),
+      mapImg = document.createElement('img');
+    if (!Object.prototype.length) {
+      Object.defineProperty(Object.prototype, 'length', {
+        get: function () {
+          return Object.keys(this).length;
+        },
+      });
+    }
+
+    /* Рисуем карту */
+    setAttributes(mapImg, { src: mapSrc, alt: 'Карта предприятий' });
+    map.appendChild(mapImg);
+
+    /* Рисуем точки */
+    for (let i = 0; i < obj.length; i++) {
+      let city = document.createElement('div'),
+        positionName = '',
+        icon = document.createElement('div');
+      city.classList.add('map__item');
+      setAttributes(city, {
+        style: 'left:' + obj[i].X + 'px;top:' + obj[i].Y + 'px;',
+      });
+      //создаем иконку с названием
+      icon.classList.add('map__icon');
+      setAttributes(icon, {
+        'data-tab': i,
+        onclick: 'window.swapActiveIconMap(' + i + ')',
+      });
+      icon.setAttribute('data-tab', i);
+      if (i === 0) {
+        icon.classList.add('is-active');
+      }
+      let nameIcon = document.createElement('div');
+      imgIcon = document.createElement('img');
+
+      if (obj[i].position == 'left') {
+        positionName = 'transform: translateX(0);';
+      }
+      if (obj[i].position == 'right') {
+        positionName = 'transform: translateX(-100%);';
+      }
+      nameIcon.classList.add('map__caption');
+      if (positionName != '') {
+        nameIcon.setAttribute('style', positionName);
+      }
+      nameIcon.innerText = obj[i].city;
+      setAttributes(imgIcon, {
+        src: iconSrc,
+        width: '32',
+        height: '44',
+        alt: obj[i].city,
+      });
+      //создаем таблички с инфой
+      let blockInfo = document.createElement('div'),
+        phones = '',
+        emails = '';
+      blockInfo.classList.add('map__info');
+      blockInfo.setAttribute('data-tab', i);
+      if (i === 0) {
+        blockInfo.classList.add('is-active');
+      }
+      for (let p = 0; p < obj[i]['phone'].length; p++) {
+        src = obj[i]['phone'][p].replace(/-/gi, '');
+        src = src.replace(' ', '');
+        phones +=
+          '<p>Тел: <a href="tel:' +
+          src +
+          '">' +
+          obj[i]['phone'][p] +
+          '</a></p>';
+      }
+      for (let e = 0; e < obj[i]['email'].length; e++) {
+        emails +=
+          '<p>Почта: <a class="map__link" href="mailto:' +
+          obj[i]['email'][e] +
+          '">' +
+          obj[i]['email'][e] +
+          '</a></p>';
+      }
+      blockInfo.innerHTML =
+        `
+							<div class="map__info-title">` +
+        obj[i]['prof'] +
+        `</div>
+							<p>` +
+        obj[i]['name'] +
+        `</p>
+							` +
+        phones +
+        emails +
+        `
+    `;
+      icon.append(imgIcon, nameIcon);
+      city.append(icon);
+      city.append(blockInfo);
+      map.append(city);
+    }
+  }
+
+  function swapActiveIconMap(attr) {
+    let a = document.querySelectorAll('.map__icon'),
+      div = document.querySelectorAll('.map__info'),
+      aCur = document.querySelector('.map__icon[data-tab="' + attr + '"]'),
+      divCur = document.querySelector('.map__info[data-tab="' + attr + '"]');
+    for (let i = 0; i < a.length; i++) {
+      a[i].classList.remove('is-active');
+    }
+    for (let i = 0; i < div.length; i++) {
+      div[i].classList.remove('is-active');
+    }
+    aCur.classList.add('is-active');
+    divCur.classList.add('is-active');
+  }
+
+  function onresizeMap() {
+    let map = document.getElementById('main-map');
+    let wMap = document.getElementById('main-map').offsetWidth;
+    setAttributes(map, { style: 'transform: scale(1)' });
+    if (wMap >= document.documentElement.scrollWidth) {
+      let scale = (document.documentElement.scrollWidth / 10000) * 8;
+      setAttributes(map, { style: 'transform: scale(' + scale + ');' });
+      let icons = document.querySelectorAll('.map__icon'),
+        info = document.querySelectorAll('.map__info');
+      if (document.documentElement.scrollWidth < 1000) {
+        for (let i = 0; i < icons.length; i++) {
+          setAttributes(icons[i], { style: 'transform: scale(1.3);' });
+          setAttributes(info[i], {
+            style: 'transform: scale(1.1);transform-origin: 125px -250px;',
+          });
+        }
+        if (document.documentElement.scrollWidth <= 941) {
+          for (let i = 0; i < icons.length; i++) {
+            setAttributes(icons[i], { style: 'transform: scale(1.5);' });
+            setAttributes(info[i], {
+              style: 'transform: scale(1.4);transform-origin: 48px -195px;',
+            });
+          }
+          if (document.documentElement.scrollWidth <= 700) {
+            for (let i = 0; i < icons.length; i++) {
+              setAttributes(icons[i], { style: 'transform: scale(1.9);' });
+              setAttributes(info[i], {
+                style: 'transform: scale(1.7);transform-origin: 48px -195px;',
+              });
+            }
+          } else {
+            for (let i = 0; i < icons.length; i++) {
+              setAttributes(icons[i], { style: 'transform: scale(1.5);' });
+              setAttributes(info[i], {
+                style: 'transform: scale(1.4);transform-origin: 48px -195px;',
+              });
+            }
+          }
+        } else {
+          for (let i = 0; i < icons.length; i++) {
+            setAttributes(icons[i], { style: 'transform: scale(1.3);' });
+            setAttributes(info[i], {
+              style: 'transform: scale(1.1);transform-origin: 125px -250px;',
+            });
+          }
+        }
+      } else {
+        for (let i = 0; i < icons.length; i++) {
+          setAttributes(icons[i], { style: '' });
+          setAttributes(info[i], { style: '' });
+        }
+      }
+    }
+  }
+
+  function setAttributes(el, attrs) {
+    for (var key in attrs) {
+      el.setAttribute(key, attrs[key]);
+    }
+  }
+
+	window.DrawMap = DrawMap;
+	window.swapActiveIconMap = swapActiveIconMap;
+}
+
+initMap();

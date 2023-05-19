@@ -12,5 +12,4 @@ import './components/sliders';
 import './components/filter-slider';
 import './components/move-filter';
 import './components/filter';
-import './components/index-map';
 import './components/accordion-select';

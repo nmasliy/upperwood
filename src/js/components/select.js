@@ -6,7 +6,8 @@ selectNodes?.forEach(el => {
 	const choices = new Choices(el, {
 		searchEnabled: false,
 		itemSelectText: '',
-		duplicateItemsAllowed: false
+		duplicateItemsAllowed: false,
+		shouldSort: false
 	});
 })
 
